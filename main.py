@@ -1,16 +1,16 @@
-# This is a sample Python script.
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
+# @Time    : 2022/4/4 0:01
+# @Author  : YarnBlue
+# @Des     :
+# @Site    : 
+# @File    : main.py
+# @Software: PyCharm
+from factory import Factory
 
-# Press Shift+F10 to execute it or replace it with your code.
-# Press Double Shift to search everywhere for classes, files, tool windows, actions, and settings.
-
-
-def print_hi(name):
-    # Use a breakpoint in the code line below to debug your script.
-    print(f'Hi, {name}')  # Press Ctrl+F8 to toggle the breakpoint.
-
-
-# Press the green button in the gutter to run the script.
 if __name__ == '__main__':
-    print_hi('PyCharm')
-
-# See PyCharm help at https://www.jetbrains.com/help/pycharm/
+    with Factory(13207797541, 'zqb090325') as client:
+        print('当前店铺管理的店铺名：', client.shop_name)
+        goods = client.goods.FetchGoods
+        goods.next(pagesize=5)
+        print('获取5条最新的商品信息：', goods.result())

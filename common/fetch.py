@@ -13,8 +13,8 @@ from api.RenRen_api import RenRenApi
 
 
 class Fetch(ABC, RenRenApi):
-    def __init__(self, cookie: str, session: requests.Session, session_id: str, shop_id: str, **kwargs):
-        RenRenApi.__init__(self, cookie, session, session_id, shop_id, **kwargs)
+    def __init__(self, session, **kwargs):
+        RenRenApi.__init__(self, session, **kwargs)
         self.data = None
         self.is_end = None
         self.is_start = None

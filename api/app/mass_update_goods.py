@@ -12,9 +12,10 @@ from api.goods.fetch_goods_list import FetchGoodsList
 from configs.configs import *
 from api.goods.edit_goods import EditGoods
 
+
 class MassUpdateGoods(RenRenApi):
     def fetcha_goods(self, **kwargs):
-        fetcher = FetchGoodsList(self.cookie, self.session, self.session_id, self.shop_id)
+        fetcher = FetchGoodsList(self.session, **self.kwargs)
         ids = []
         while fetcher.next(**kwargs):
             for goods in fetcher.result():
@@ -22,15 +23,10 @@ class MassUpdateGoods(RenRenApi):
         return ids
 
     def mash_update_goods(self, *goods_ids, **kwargs):
-        Editor = EditGoods(self.cookie, self.session, self.session_id, self.shop_id, **self.kwargs)
+        Editor = EditGoods(self.session, **self.kwargs)
         for id in goods_ids:
             if Editor.edit_goods_by_first_level(id, **kwargs):
                 print(f'商品:{id}批量修改属性：{kwargs.keys()}完成')
             else:
                 print(f'商品:{id}修改属性失败')
 
-
-if __name__ == '__main__':
-    client = MassUpdateGoods(COOKIE, requests.Session(), SESSION_ID, SHOP_ID)
-    ids = client.fetcha_goods(**{'category_id[]': [3391, 3392, 3393, 3394, 3395]})
-    client.mash_update_goods(*ids, dispatch_express=1, dispatch_verify=0, dispatch_type=0)

@@ -16,6 +16,7 @@ from api.goods.add_goods import AddGoods
 from api.goods.goods_info import GoodsInfo
 from configs.configs import *
 
+
 class EditGoods(RenRenApi):
     @staticmethod
     def form_data(infos: dict) -> dict:
@@ -121,10 +122,7 @@ class EditGoods(RenRenApi):
         :param kwargs:
         :return:
         """
-        get_goods_info = GoodsInfo(self.cookie,
-                                   self.session,
-                                   session_id=self.session_id,
-                                   shop_id=self.shop_id,
+        get_goods_info = GoodsInfo(self.session,
                                    **self.kwargs)
         goods_infos = get_goods_info.goods_info(id)['data']
         for index, (key, value) in enumerate(kwargs.items()):
@@ -141,8 +139,4 @@ class EditGoods(RenRenApi):
             return False
 
 
-if __name__ == '__main__':
-    editor = EditGoods(COOKIE, requests.Session(), SESSION_ID, SHOP_ID)
-    if editor.edit_goods_by_first_level(9667, dispatch_express=0, dispatch_verify=1, is_all_verify=1):
-        print('Done!')
 

@@ -14,7 +14,7 @@ from configs.configs import *
 
 
 class FetchGroupsList(Fetch):
-    def __init__(self, cookie: str, session: requests.Session, session_id: str, shop_id: str, **kwargs):
+    def __init__(self, session, **kwargs):
         """
 
         :param cookie:
@@ -23,7 +23,7 @@ class FetchGroupsList(Fetch):
         :param shop_id:
         :param kwargs:
         """
-        super().__init__(cookie, session, session_id, shop_id, **kwargs)
+        super().__init__(session, **kwargs)
         self.first = self.URL.group_list()
         self.Temp = {
             'pagesize': 10,
@@ -93,8 +93,5 @@ class FetchGroupsList(Fetch):
     def result(self):
         return self.data
 
-if __name__ == '__main__':
-    fetcher = FetchGroupsList(COOKIE, requests.Session(), SESSION_ID, SHOP_ID)
-    while fetcher.next(name='分销组'):
-        print(fetcher.result())
+
 

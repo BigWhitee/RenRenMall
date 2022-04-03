@@ -14,7 +14,7 @@ from configs.configs import *
 
 
 class FetchLogList(Fetch):
-    def __init__(self, cookie: str, session: requests.Session, session_id: str, shop_id: str, **kwargs):
+    def __init__(self, session, **kwargs):
         """
         :param cookie:
         :param session:
@@ -22,7 +22,7 @@ class FetchLogList(Fetch):
         :param shop_id:
         :param kwargs:
         """
-        super().__init__(cookie, session, session_id, shop_id, **kwargs)
+        super().__init__(session, **kwargs)
         self.first = self.URL.log_list()
         self.Temp = {
             'page': 1,
@@ -98,7 +98,3 @@ class FetchLogList(Fetch):
         return self.data
 
 
-if __name__ == '__main__':
-    fetcher = FetchLogList(COOKIE, requests.Session(), SESSION_ID, SHOP_ID)
-    while fetcher.next(identify_code=200001):
-        print(fetcher.result())

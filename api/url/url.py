@@ -13,6 +13,15 @@ class URL:
     def __init__(self):
         self.host = 'https://rr.hanchenshop.com'
 
+    def get_session_id(self):
+        return self.host + '/account/index/get-session-id'
+
+    def login(self):
+        return self.host + '/account/login/submit'
+
+    def logout(self):
+        return self.host + '/account/logout'
+
     def upload_img(self):
         return self.host + f'/shop/api/utility/attachment/list/upload'
 
@@ -47,10 +56,13 @@ class URL:
         return self.host + '/shop/api/goods/group/update'
 
     def log_list(self):
-        return self.host + '/shop/api/sysset/log/list?page=1&pagesize=10'
+        return self.host + '/shop/api/sysset/log/list'
 
     def log_info(self):
         return self.host + '/shop/api/sysset/log/detail'
+
+    def shop_index(self):
+        return self.host + '/account/shop/list/index'
 
 
 if __name__ == '__main__':

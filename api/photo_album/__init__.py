@@ -5,3 +5,6 @@
 @description : 
 @File : __init__.py.py 
 """
+from .add_album import AddAlbum
+
+__all__ = ['AddAlbum']

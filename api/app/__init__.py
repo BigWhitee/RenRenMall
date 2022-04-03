@@ -5,3 +5,6 @@
 @description : 
 @File : __init__.py.py 
 """
+from .mass_update_goods import MassUpdateGoods
+
+__all__ = ['MassUpdateGoods']

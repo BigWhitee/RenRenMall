@@ -79,11 +79,5 @@ class NpEncoder(json.JSONEncoder):
         else:
             return super(NpEncoder, self).default(obj)
 
-if __name__ == '__main__':
-    client = AddGoods(COOKIE,requests.Session(), SESSION_ID, SHOP_ID)
-    goods = client.template('goods')
-    spec = client.template('spec')
-    options = client.template('options')
-    goods_commission = client.template('goods_commission')
-    client.add_goods(goods, spec, options, goods_commission, {})
+
 

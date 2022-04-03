@@ -5,3 +5,6 @@
 @description : 
 @File : __init__.py.py 
 """
+from .img_uploader import ImgUploader
+
+__all__ = ['ImgUploader']

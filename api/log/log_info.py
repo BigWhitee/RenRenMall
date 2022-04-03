@@ -20,17 +20,3 @@ class LogInfo(RenRenApi):
         return rep.json()
 
 
-if __name__ == '__main__':
-    fetcher = FetchLogList(COOKIE, requests.Session(), SESSION_ID, SHOP_ID)
-    logInfo = LogInfo(COOKIE, requests.Session(), SESSION_ID, SHOP_ID)
-    while fetcher.next(identify_code=200001, pagesize=100, **{'create_time[0]': '2022-04-01 00:00:00', 'create_time[1]': '2022-04-02 12:00:00'}):
-        results = fetcher.result()
-        for result in results:
-            id = result['id']
-            infos = logInfo.log_info(id)
-            goods_id = infos['relation_ids']
-            if goods_id == '9726':
-                print(id)
-                print(infos['dirty_primary']['基本设置']['商品规格'])
-                sys.exit()
-

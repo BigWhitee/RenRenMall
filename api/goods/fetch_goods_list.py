@@ -14,7 +14,7 @@ from configs.configs import *
 
 
 class FetchGoodsList(Fetch):
-    def __init__(self, cookie: str, session: requests.Session, session_id: str, shop_id: str, **kwargs):
+    def __init__(self, session, **kwargs):
         """
         start() 启动时可以输入属性值，
         type:商品类型，可以为all, 0, 1, 2, 3, 4
@@ -26,7 +26,7 @@ class FetchGoodsList(Fetch):
         :param shop_id:
         :param kwargs:
         """
-        super().__init__(cookie, session, session_id, shop_id, **kwargs)
+        super().__init__(session, **kwargs)
         self.first = self.URL.goods_list()
         self.Temp = {
             'type': 'all',
@@ -146,7 +146,3 @@ class FetchGoodsList(Fetch):
         return self.data
 
 
-if __name__ == '__main__':
-    fetcher = FetchGoodsList(COOKIE, requests.Session(), SESSION_ID, SHOP_ID)
-    while fetcher.next(keywords='牛奶', is_commission=1):
-        print(fetcher.result())

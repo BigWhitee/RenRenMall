@@ -29,13 +29,3 @@ class AddAlbum(RenRenApi):
         }
         rep = self.session.post(self.URL.add_album(), data=data)
         return rep.json()
-
-
-if __name__ == '__main__':
-    cookie = COOKIE
-    session = requests.Session()
-    session_id = SESSION_ID
-    shop_id = SHOP_ID
-    adder = AddAlbum(cookie, session, session_id=session_id, shop_id=shop_id)
-    res = adder.add_album('测试图组')
-    print(res)

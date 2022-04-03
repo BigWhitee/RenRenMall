@@ -5,3 +5,9 @@
 @description : 
 @File : __init__.py.py 
 """
+from .groups_info import GroupsInfo
+from .add_group import AddGroup
+from .update_groups import UpdateGroups
+from .fetch_groups_list import FetchGroupsList
+
+__all__ = ['GroupsInfo', 'AddGroup', 'UpdateGroups', 'FetchGroupsList']

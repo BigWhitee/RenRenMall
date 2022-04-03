@@ -19,7 +19,3 @@ class GoodsInfo(RenRenApi):
         return rep.json()
 
 
-if __name__ == '__main__':
-    client = GoodsInfo(COOKIE, requests.Session(), SESSION_ID, SHOP_ID)
-    res = client.goods_info(9726)
-    print(json.dumps(res))

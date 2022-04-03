@@ -9,6 +9,7 @@ import requests
 
 from api.RenRen_api import RenRenApi
 from configs.configs import *
+from api.group.groups_info import GroupsInfo
 
 class UpdateGroups(RenRenApi):
     def update_groups(self, id, *goods_ids, **kwargs):
@@ -39,6 +40,8 @@ class UpdateGroups(RenRenApi):
         else:
             return False
 
-if __name__ == '__main__':
-    client = UpdateGroups(COOKIE, requests.Session(), SESSION_ID, SHOP_ID)
-    client.update_groups(72, 9602, 9603, 9604, name='分销组', desc='开启分销的商品')
+    def add_goods_to_groups(self, group_id, *goods_id):
+        InfoGetter = GroupsInfo(self.session, **self.kwargs)
+        inofs = InfoGetter.groups_info(group_id)
+
+
