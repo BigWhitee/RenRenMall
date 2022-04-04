@@ -1,2 +1,2 @@
-# RenRenShangCheng
-人人商城后台管理
+# 安装
+pip install renren_mall
