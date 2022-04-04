@@ -5,3 +5,5 @@
 @description : 
 @File : __init__.py.py 
 """
+
+__all__ = ['app', 'goods', 'category', 'group', 'log', 'photo_album', 'uploader', 'url']

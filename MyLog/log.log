@@ -13,3 +13,8 @@
 [2022-04-04  14:10:50.798] "D:\python\RenRenShangCheng\factory\factory.py:63" [INFO] : 获取该账户管理的店铺
 [2022-04-04  14:10:50.798] "D:\python\RenRenShangCheng\factory\factory.py:65" [INFO] : 店铺初始化，默认获取第一个店铺的管理权，若有多个店铺，可通过self.switch_shop()进行管理权切换
 [2022-04-04  14:10:51.065] "D:\python\RenRenShangCheng\factory\factory.py:52" [INFO] : 账号登出成功
+[2022-04-04  17:04:32.062] "D:\python\renren_mall\factory\factory.py:57" [INFO] : 账户初始化
+[2022-04-04  17:04:32.218] "D:\python\renren_mall\factory\factory.py:59" [INFO] : 账户登录成功
+[2022-04-04  17:04:32.311] "D:\python\renren_mall\factory\factory.py:63" [INFO] : 获取该账户管理的店铺
+[2022-04-04  17:04:32.311] "D:\python\renren_mall\factory\factory.py:65" [INFO] : 店铺初始化，默认获取第一个店铺的管理权，若有多个店铺，可通过self.switch_shop()进行管理权切换
+[2022-04-04  17:04:32.564] "D:\python\renren_mall\factory\factory.py:52" [INFO] : 账号登出成功
