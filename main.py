@@ -12,3 +12,4 @@ from configs.configs import *
 if __name__ == '__main__':
     with Factory(USERNAME, PASSWORD) as client:
         rep = client.goods.GoodsInfo.goods_info(9726)
+        client.log.LogInfo.log_info('125689')
