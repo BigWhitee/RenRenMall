@@ -5,12 +5,8 @@
 @description : 
 @File : fetch_groups_list.py
 """
-import time
-
-import requests
 
 from common.fetch import Fetch
-from configs.configs import *
 
 
 class FetchGroupsList(Fetch):
@@ -19,8 +15,6 @@ class FetchGroupsList(Fetch):
 
         :param cookie:
         :param session:
-        :param session_id:
-        :param shop_id:
         :param kwargs:
         """
         super().__init__(session, **kwargs)
@@ -71,6 +65,19 @@ class FetchGroupsList(Fetch):
         self.fetch(self.first, **self.Temp)
 
     def next(self, **kwargs):
+        """
+
+        :param kwargs: 可接受参数如下：
+
+        =========================
+        pagesize: 每页数据量
+        page: 页码
+        pager: ?,默认为1
+        name: 商品组名称
+        =========================
+
+        :return:
+        """
         if self.is_end:
             return False
         else:

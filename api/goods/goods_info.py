@@ -5,12 +5,8 @@
 @description : 
 @File : goods_info.py 
 """
-import json
-
-import requests
 
 from api.RenRen_api import RenRenApi
-from configs.configs import *
 
 
 class GoodsInfo(RenRenApi):

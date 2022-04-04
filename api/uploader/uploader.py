@@ -7,10 +7,7 @@
 """
 from abc import ABC
 
-import requests
-
 from api.RenRen_api import RenRenApi
-from api.url.url import URL
 
 
 class Uploader(ABC, RenRenApi):

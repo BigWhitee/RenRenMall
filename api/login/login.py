@@ -5,8 +5,6 @@
 # @Site    : 
 # @File    : login.py
 # @Software: PyCharm
-import hashlib
-import time
 
 import requests
 from api.url.url import URL
@@ -55,9 +53,7 @@ class Login:
     def logout(self):
         rep = requests.post(self.URL.logout(), headers=self.headers, **self.kwargs)
         if rep.json()['error'] == 0:
-            print('账号登出成功')
             return True
         else:
-            print(rep.text)
             return False
 

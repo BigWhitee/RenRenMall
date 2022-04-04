@@ -9,11 +9,8 @@ import json
 import os
 
 import numpy as np
-import pandas as pd
-import requests
 
 from api.RenRen_api import RenRenApi
-from configs.configs import *
 
 
 class AddGoods(RenRenApi):

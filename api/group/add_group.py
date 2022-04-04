@@ -9,7 +9,7 @@ from api.RenRen_api import RenRenApi
 
 
 class AddGroup(RenRenApi):
-    def add_group(self, name, status=1, *goods_ids):
+    def add_group(self, name, status, *goods_ids):
         data = {
             'name': name,
             'status': status

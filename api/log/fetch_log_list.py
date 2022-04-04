@@ -5,12 +5,8 @@
 @description : 
 @File : fetch_log_list.py 
 """
-import time
-
-import requests
 
 from common.fetch import Fetch
-from configs.configs import *
 
 
 class FetchLogList(Fetch):

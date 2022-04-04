@@ -11,8 +11,6 @@ import requests, io
 from PIL import Image
 
 from api.uploader.uploader import Uploader
-from api.url.url import URL
-from configs.configs import *
 
 
 class ImgUploader(Uploader):

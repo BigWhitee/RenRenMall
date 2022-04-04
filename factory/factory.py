@@ -5,11 +5,13 @@
 # @Site    : api常用功能集合
 # @File    : factory.py
 # @Software: PyCharm
+import getpass
 import time
 from typing import TypeVar
 
 import requests
 
+from api.category import *
 from api.url.url import URL
 from api.goods import *
 from api.group import *
@@ -17,12 +19,18 @@ from api.log import *
 from api.photo_album import *
 from api.app import *
 from api.uploader import *
-
+from common import *
 Myshop = TypeVar('Myshop', int, str)
 
 
 class Factory:
-    def __init__(self, username, password, **kwargs):
+    logger = log().logger
+
+    def __init__(self, username=None, password=None, **kwargs):
+        if not username:
+            username = input('请输入你的用户名：\n')
+        if not password:
+            password = getpass.getpass('请输入您的密码：\n')
         self.username = username
         self.password = password
         self.kwargs = kwargs
@@ -40,12 +48,21 @@ class Factory:
         self.request_session_id()
 
     def __exit__(self, exc_type, exc_val, exc_tb):
-        self.__logout()
+        if self.__logout():
+            self.logger.info('账号登出成功')
+        else:
+            self.logger.error('账号登出失败')
 
     def __enter__(self):
-        self.__login()
+        self.logger.info('账户初始化')
+        if self.__login():
+            self.logger.info('账户登录成功')
+        else:
+            self.logger.error('账户登录失败，请检查账号密码')
         self.__get_shop_id()
+        self.logger.info('获取该账户管理的店铺')
         self.__shop_init(self.shop_ids[0])
+        self.logger.info('店铺初始化，默认获取第一个店铺的管理权，若有多个店铺，可通过self.switch_shop()进行管理权切换')
         return self
 
     def request_session_id(self):
@@ -62,6 +79,9 @@ class Factory:
         rep = self.session.post(self.URL.login(), data=data, **self.kwargs)
         if rep.json()['error'] == 0:
             return True
+        else:
+            self.logger.error(rep.text)
+            return False
 
     def __get_shop_id(self):
         t = int(time.time())
@@ -78,10 +98,9 @@ class Factory:
     def __logout(self):
         rep = requests.post(self.URL.logout(), headers=self.headers, **self.kwargs)
         if rep.json()['error'] == 0:
-            print('账号登出成功')
             return True
         else:
-            print(rep.text)
+            self.logger.error(rep.text)
             return False
 
     def switch_shop(self, myshop: Myshop):
@@ -94,6 +113,12 @@ class Factory:
         self.__shop_init(myshop)
 
     def __shop_init(self, myshop: Myshop):
+        """
+        店铺初始化，默认管理第一个店铺
+
+        :param myshop:
+        :return:
+        """
         if isinstance(myshop, int):
             self.shop_id = myshop
             self.shop_name = self.shop[str(myshop)]
@@ -101,11 +126,26 @@ class Factory:
             self.shop_name = myshop
             self.shop_id = self.shop_ids[self.shop_names.index(myshop)]
         self.headers['shop-id'] = str(self.shop_id)
-        self.goods = self.Goods(self.session, **self.kwargs)
-        self.group = self.Groups(self.session, **self.kwargs)
-        self.log = self.Log(self.session, **self.kwargs)
+        self.category = self.__Category(self.session, **self.kwargs)
+        self.goods = self.__Goods(self.session, **self.kwargs)
+        self.group = self.__Groups(self.session, self.shop_id, **self.kwargs)
+        self.log = self.__Log(self.session, **self.kwargs)
+        self.app = self.__App(self.session, **self.kwargs)
+        self.upload = self.__Upload(self.session, **self.kwargs)
 
-    class Goods:
+    class __Category:
+        def __init__(self, session, **kwargs):
+            """
+            商品分类功能模块
+
+            :param session:
+            :param kwargs:
+            """
+            self.session = session
+            self.kwargs = kwargs
+            self.Category = Category(self.session, **self.kwargs)
+
+    class __Goods:
         def __init__(self, session, **kwargs):
             """
             商品功能模块
@@ -119,20 +159,22 @@ class Factory:
             self.FetchGoods = FetchGoodsList(self.session, **self.kwargs)
             self.GoodsInfo = GoodsInfo(self.session, **self.kwargs)
 
-    class Groups:
-        def __init__(self, session, **kwargs):
+    class __Groups:
+        def __init__(self, session, shop_id, **kwargs):
             """
             商品分组功能模块
 
             :param session:
             """
             self.session = session
+            self.shop_id = shop_id
             self.kwargs = kwargs
             self.AddGroup = AddGroup(self.session, **self.kwargs)
             self.FetchGroupsList = FetchGroupsList(self.session, **self.kwargs)
             self.GroupsInfo = GroupsInfo(self.session, **self.kwargs)
+            self.UpdateGroups = UpdateGroups(self.session, self.shop_id, **kwargs)
 
-    class Log:
+    class __Log:
         def __init__(self, session, **kwargs):
             """
             店铺操作日志功能版块
@@ -145,7 +187,7 @@ class Factory:
             self.FetchLogList = FetchLogList(self.session, **self.kwargs)
             self.LogInfo = LogInfo(self.session, **self.kwargs)
 
-    class PhotoAlbum:
+    class __PhotoAlbum:
         def __init__(self, session, **kwargs):
             """
             相册功能模块
@@ -155,7 +197,7 @@ class Factory:
             self.kwargs = kwargs
             self.AddAlbum = AddAlbum(self.session, **self.kwargs)
 
-    class Upload:
+    class __Upload:
         def __init__(self, session, **kwargs):
             """
             文件上传功能模块
@@ -167,7 +209,7 @@ class Factory:
             self.kwargs = kwargs
             self.ImgUploader = ImgUploader(self.session, **self.kwargs)
 
-    class App:
+    class __App:
         def __init__(self, session, **kwargs):
             """
             常用应用功能模块

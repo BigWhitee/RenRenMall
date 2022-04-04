@@ -5,7 +5,6 @@
 @description : 
 @File : RenRen_api.py
 """
-import requests
 
 from api.url.url import URL
 

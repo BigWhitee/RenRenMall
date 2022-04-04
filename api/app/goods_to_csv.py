@@ -26,10 +26,10 @@ from api.photo_album.add_album import AddAlbum
 
 class GoodsToCsv:
     def __init__(self):
-        self.host = '101.132.41.165'
-        self.database = 'wx_yarnlanguage_'
-        self.user = 'wx_yarnlanguage_'
-        self.password = '3NNDaxdnN4bADbbR'
+        self.host = ''
+        self.database = ''
+        self.user = ''
+        self.password = ''
         self.db = connection_db(self.host, self.database, self.user, self.password)
 
     def goods_to_csv(self):

@@ -5,14 +5,17 @@
 @description : 
 @File : update_groups.py
 """
-import requests
-
 from api.RenRen_api import RenRenApi
-from configs.configs import *
 from api.group.groups_info import GroupsInfo
+from api.group.fetch_groups_list import FetchGroupsList
+
 
 class UpdateGroups(RenRenApi):
-    def update_groups(self, id, *goods_ids, **kwargs):
+    def __init__(self, session, shop_id, **kwargs):
+        super().__init__(session, **kwargs)
+        self.shop_id = shop_id
+
+    def update_groups(self, id=None, name=None, *goods_ids, **kwargs):
         """
         更新商品组信息
 
@@ -21,11 +24,18 @@ class UpdateGroups(RenRenApi):
         :param kwargs: 根据需求传入对应属性值
         :return:
         """
+        if id:
+            groupsInfo = GroupsInfo(self.session, **self.kwargs)
+            name = groupsInfo.groups_info(id)['data']['name']
+        if name:
+            groupsList = FetchGroupsList(self.session, **self.kwargs)
+            groupsList.next(name=name)
+            id = groupsList.result()[0]['id']
         data = {
             'id': id,
             'shop_id': 480,
             'status': 1,
-            'name': '分销组',
+            'name': name,
             'desc': '',
             'sort_type': 0,
         }
@@ -33,7 +43,6 @@ class UpdateGroups(RenRenApi):
             data[f'goods_id[{index}]'] = value
         for index, (key, value) in enumerate(kwargs.items()):
             data[key] = value
-        print(data)
         rep = self.session.post(self.URL.update_groups(), data=data)
         if rep.json()['error'] == 0:
             return True

@@ -9,12 +9,12 @@ import json
 import random
 import time
 
-import requests
 
 from api.RenRen_api import RenRenApi
 from api.goods.add_goods import AddGoods
 from api.goods.goods_info import GoodsInfo
-from configs.configs import *
+from common.log import log
+logger = log().logger
 
 
 class EditGoods(RenRenApi):
@@ -36,7 +36,7 @@ class EditGoods(RenRenApi):
                 option['specs'] = option['specs'].split(',')
                 option['tmpid'] = option['id']
         except Exception as e:
-            print(f'options错误，{e}')
+            logger.error(f'options错误，{e}')
             options = []
         try:
             spec = infos.pop('spec')
@@ -46,7 +46,7 @@ class EditGoods(RenRenApi):
                     item['specId'] = item['spec_id']
                     item['_sortId'] = f'{int(time.time()*1000)}_{random.random()}'
         except Exception as e:
-            print(f'spec错误，{e}')
+            logger.error(f'spec错误，{e}')
             spec = []
         data = {
             'options': options,

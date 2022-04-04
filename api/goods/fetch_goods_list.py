@@ -7,10 +7,7 @@
 """
 import time
 
-import requests
-
 from common.fetch import Fetch
-from configs.configs import *
 
 
 class FetchGoodsList(Fetch):
