@@ -5,11 +5,8 @@
 @description : 批量修改商品属性
 @File : mass_update_goods.py
 """
-import requests
-
 from api.RenRen_api import RenRenApi
 from api.goods.fetch_goods_list import FetchGoodsList
-from configs.configs import *
 from api.goods.edit_goods import EditGoods
 
 
