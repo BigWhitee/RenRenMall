@@ -1,7 +1,7 @@
 from setuptools import setup, find_packages
 
 setup(
-    name='RenRen_Mall',  # 应用名
+    name='RenRen_Shop',  # 应用名
     version='0.1.0',  # 版本号
     author='YarnBlue',
     author_email='zqb090325@126.com',
