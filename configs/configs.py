@@ -5,5 +5,5 @@
 @description :
 @File : configs.py
 """
-USERNAME = ''
-PASSWORD = ''
+USERNAME = 'username'
+PASSWORD = 'password'
