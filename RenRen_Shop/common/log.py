@@ -37,6 +37,8 @@ class log:
         self.console_handler = logging.StreamHandler()
         # 输出到文件
         filePath = os.path.dirname(os.path.dirname(__file__))
+        if not os.path.exists(os.path.join(filePath, f'MyLog')):
+            os.mkdir(os.path.join(filePath, f'MyLog'))
         self.file_handler = logging.FileHandler(filename=os.path.join(filePath, f'MyLog/{filename}'), mode='a',
                                                 encoding='utf8')
         # 输出错误日记到文件
