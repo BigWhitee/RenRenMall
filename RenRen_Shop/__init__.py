@@ -5,3 +5,6 @@
 # @desc    : 
 # @File    : __init__.py
 # @Software: PyCharm
+from .factory.factory import Factory
+
+__all__ = ['Factory']

@@ -132,6 +132,7 @@ class Factory:
         self.log = self.__Log(self.session, **self.kwargs)
         self.app = self.__App(self.session, **self.kwargs)
         self.upload = self.__Upload(self.session, **self.kwargs)
+        self.photo_album = self.__PhotoAlbum
 
     class __Category:
         def __init__(self, session, **kwargs):
@@ -219,7 +220,7 @@ class Factory:
             """
             self.session = session
             self.kwargs = kwargs
-            self.MassUpdate_goods = MassUpdateGoods(self.session, **self.kwargs)
+            self.MassUpdateGoods = MassUpdateGoods(self.session, **self.kwargs)
 
 
 
