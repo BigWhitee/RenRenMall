@@ -6,6 +6,57 @@
   <component name="ChangeListManager">
     <list default="true" id="0320431c-2aa2-4605-926c-394be34cd999" name="Changes" comment="优化">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/renren_mall/MyLog/error.log" beforeDir="false" afterPath="$PROJECT_DIR$/RenRen_Shop/MyLog/error.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/renren_mall/MyLog/log.log" beforeDir="false" afterPath="$PROJECT_DIR$/RenRen_Shop/MyLog/log.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/renren_mall/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/RenRen_Shop/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/renren_mall/api/RenRen_api.py" beforeDir="false" afterPath="$PROJECT_DIR$/RenRen_Shop/api/RenRen_api.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/renren_mall/api/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/RenRen_Shop/api/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/renren_mall/api/app/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/RenRen_Shop/api/app/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/renren_mall/api/app/del_bug.py" beforeDir="false" afterPath="$PROJECT_DIR$/RenRen_Shop/api/app/del_bug.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/renren_mall/api/app/goods_to_csv.py" beforeDir="false" afterPath="$PROJECT_DIR$/RenRen_Shop/api/app/goods_to_csv.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/renren_mall/api/app/mass_update_goods.py" beforeDir="false" afterPath="$PROJECT_DIR$/RenRen_Shop/api/app/mass_update_goods.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/renren_mall/api/category/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/RenRen_Shop/api/category/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/renren_mall/api/category/category_list.py" beforeDir="false" afterPath="$PROJECT_DIR$/RenRen_Shop/api/category/category_list.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/renren_mall/api/goods/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/RenRen_Shop/api/goods/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/renren_mall/api/goods/add_goods.py" beforeDir="false" afterPath="$PROJECT_DIR$/RenRen_Shop/api/goods/add_goods.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/renren_mall/api/goods/edit_goods.py" beforeDir="false" afterPath="$PROJECT_DIR$/RenRen_Shop/api/goods/edit_goods.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/renren_mall/api/goods/fetch_goods_list.py" beforeDir="false" afterPath="$PROJECT_DIR$/RenRen_Shop/api/goods/fetch_goods_list.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/renren_mall/api/goods/goods_info.py" beforeDir="false" afterPath="$PROJECT_DIR$/RenRen_Shop/api/goods/goods_info.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/renren_mall/api/goods/template/goods_commission_template.json" beforeDir="false" afterPath="$PROJECT_DIR$/RenRen_Shop/api/goods/template/goods_commission_template.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/renren_mall/api/goods/template/goods_edit_template.json" beforeDir="false" afterPath="$PROJECT_DIR$/RenRen_Shop/api/goods/template/goods_edit_template.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/renren_mall/api/goods/template/goods_infos_template.json" beforeDir="false" afterPath="$PROJECT_DIR$/RenRen_Shop/api/goods/template/goods_infos_template.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/renren_mall/api/goods/template/goods_list_template.json" beforeDir="false" afterPath="$PROJECT_DIR$/RenRen_Shop/api/goods/template/goods_list_template.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/renren_mall/api/goods/template/goods_template.json" beforeDir="false" afterPath="$PROJECT_DIR$/RenRen_Shop/api/goods/template/goods_template.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/renren_mall/api/goods/template/member_level_discount.json" beforeDir="false" afterPath="$PROJECT_DIR$/RenRen_Shop/api/goods/template/member_level_discount.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/renren_mall/api/goods/template/options_edit_template.json" beforeDir="false" afterPath="$PROJECT_DIR$/RenRen_Shop/api/goods/template/options_edit_template.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/renren_mall/api/goods/template/options_template.json" beforeDir="false" afterPath="$PROJECT_DIR$/RenRen_Shop/api/goods/template/options_template.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/renren_mall/api/goods/template/spec_edit_template.json" beforeDir="false" afterPath="$PROJECT_DIR$/RenRen_Shop/api/goods/template/spec_edit_template.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/renren_mall/api/goods/template/spec_template.json" beforeDir="false" afterPath="$PROJECT_DIR$/RenRen_Shop/api/goods/template/spec_template.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/renren_mall/api/group/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/RenRen_Shop/api/group/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/renren_mall/api/group/add_group.py" beforeDir="false" afterPath="$PROJECT_DIR$/RenRen_Shop/api/group/add_group.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/renren_mall/api/group/fetch_groups_list.py" beforeDir="false" afterPath="$PROJECT_DIR$/RenRen_Shop/api/group/fetch_groups_list.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/renren_mall/api/group/groups_info.py" beforeDir="false" afterPath="$PROJECT_DIR$/RenRen_Shop/api/group/groups_info.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/renren_mall/api/group/update_groups.py" beforeDir="false" afterPath="$PROJECT_DIR$/RenRen_Shop/api/group/update_groups.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/renren_mall/api/log/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/RenRen_Shop/api/log/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/renren_mall/api/log/fetch_log_list.py" beforeDir="false" afterPath="$PROJECT_DIR$/RenRen_Shop/api/log/fetch_log_list.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/renren_mall/api/log/log_info.py" beforeDir="false" afterPath="$PROJECT_DIR$/RenRen_Shop/api/log/log_info.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/renren_mall/api/login/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/RenRen_Shop/api/login/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/renren_mall/api/login/login.py" beforeDir="false" afterPath="$PROJECT_DIR$/RenRen_Shop/api/login/login.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/renren_mall/api/photo_album/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/RenRen_Shop/api/photo_album/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/renren_mall/api/photo_album/add_album.py" beforeDir="false" afterPath="$PROJECT_DIR$/RenRen_Shop/api/photo_album/add_album.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/renren_mall/api/uploader/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/RenRen_Shop/api/uploader/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/renren_mall/api/uploader/img_uploader.py" beforeDir="false" afterPath="$PROJECT_DIR$/RenRen_Shop/api/uploader/img_uploader.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/renren_mall/api/uploader/uploader.py" beforeDir="false" afterPath="$PROJECT_DIR$/RenRen_Shop/api/uploader/uploader.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/renren_mall/api/url/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/RenRen_Shop/api/url/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/renren_mall/api/url/url.py" beforeDir="false" afterPath="$PROJECT_DIR$/RenRen_Shop/api/url/url.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/renren_mall/common/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/RenRen_Shop/common/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/renren_mall/common/conDB.py" beforeDir="false" afterPath="$PROJECT_DIR$/RenRen_Shop/common/conDB.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/renren_mall/common/fetch.py" beforeDir="false" afterPath="$PROJECT_DIR$/RenRen_Shop/common/fetch.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/renren_mall/common/log.py" beforeDir="false" afterPath="$PROJECT_DIR$/RenRen_Shop/common/log.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/renren_mall/configs/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/RenRen_Shop/configs/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/renren_mall/configs/configs.py" beforeDir="false" afterPath="$PROJECT_DIR$/RenRen_Shop/configs/configs.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/renren_mall/factory/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/RenRen_Shop/factory/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/renren_mall/factory/factory.py" beforeDir="false" afterPath="$PROJECT_DIR$/RenRen_Shop/factory/factory.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/setup.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -36,7 +87,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
-  <component name="RunManager" selected="Python.test">
+  <component name="RunManager" selected="Python.test (1)">
     <configuration name="main" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="RenRenMall" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -50,6 +101,27 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/main.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="test (1)" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="RenRenMall" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/test.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -81,6 +153,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.test (1)" />
         <item itemvalue="Python.test" />
         <item itemvalue="Python.main" />
       </list>
@@ -207,7 +280,14 @@
       <option name="project" value="LOCAL" />
       <updated>1649209770068</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="优化">
+      <created>1649210640324</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1649210640324</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
