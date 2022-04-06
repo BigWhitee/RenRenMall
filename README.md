@@ -12,29 +12,29 @@
 pip install RenRen_Shop
 
 ## 主要结构
-<details><summary>goods</summary>
+<details><summary>goods：商品模块</summary>
 GoodsInfo : 商品信息<br>
 AddGoods : 增加商品<br>
 EditGoods : 编辑商品<br>
 FetchGoods : 获取商品列表
 </details>
-<details><summary>category</summary>
+<details><summary>category：商品分类模块</summary>
 Category : 商品分类<br>
 </details>
-<details><summary>group</summary>
+<details><summary>group：商品分组模块</summary>
 GroupsInfo : 商品分组信息<br>
 FetchGroups : 获取商品分组列表<br>
 AddGroup : 增加商品分组<br>
 UpdateGroup : 更新商品分组
 </details>
-<details><summary>log</summary>
+<details><summary>log：操作日志模块</summary>
 LogInfo : 账户操作日志信息<br>
 FetchLogList : 获取操作日志列表<br>
 </details>
-<details><summary>upload</summary>
+<details><summary>upload：上传模块</summary>
 ImgUploader : 上传图片<br>
 </details>
-<details><summary>photo_album</summary>
+<details><summary>photo_album：图册模块</summary>
 AddAlbum : 增加图片分组<br>
 </details>
 
