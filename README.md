@@ -5,6 +5,9 @@
 | description | 人人商城后台管理 |
 |   version   |  0.1.4   |
 
+## 说明
+该项目基于人人商城代理商韩辰科技所属域名地址，下版本会适配人人商城不同代理商
+
 ## 安装
 pip install RenRen_Shop
 
