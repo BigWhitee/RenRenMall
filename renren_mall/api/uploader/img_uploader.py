@@ -10,7 +10,7 @@ import os.path
 import requests, io
 from PIL import Image
 
-from api.uploader.uploader import Uploader
+from renren_mall.api.uploader.uploader import Uploader
 
 
 class ImgUploader(Uploader):
