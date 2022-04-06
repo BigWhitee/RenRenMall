@@ -48,7 +48,7 @@ AddAlbum : 增加图片分组<br>
 ```python
 from RenRen_Shop.factory import Factory
 
-with Factory(username='', password='') as client:
+with Factory(username='你的账号', password='你的密码') as client:
     print(client.shop_ids)  # 拥有管理权的店铺ID列表
     print(client.shop_names)  # 拥有管理权的店铺列表
     print(client.shop_id)  # 当前管理的店铺ID,初始化默认使用第一个店铺
