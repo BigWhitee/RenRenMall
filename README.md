@@ -57,7 +57,7 @@ with Factory(username='你的账号', password='你的密码') as client:
     print(client.shop_names)  # 拥有管理权的店铺列表
     print(client.shop_id)  # 当前管理的店铺ID,初始化默认使用第一个店铺
     print(client.shop_name)  # 当前管理的店铺名
-    client.switch_shop(myshop=125)  # 店铺切换
+    client.switch_shop(myshop='你的店铺id或者店铺名')  # 店铺切换
     client.goods.GoodsInfo.goods_info(id=2658)  # 商品2658的信息
     goods = client.goods.FetchGoods
     goods.next(status=0)  # 增加筛选条件
