@@ -84,3 +84,5 @@ with Factory(username='', password='') as client:
     }  # 你需要修改的商品属性
     client.app.MassUpdateGoods.mash_update_goods(*goods, **kwargs)
 ```
+## 结语
+基于本项目，可实现多种批量管理功能，例如批量导出商品信息，批量修改商品信息，批量上传商品，批量对商品进行商品分组；在实际生产过程，批量化操作多属于不可逆过程，请做好数据备份，本项目对生产问题概不负责，请谨慎操作。
