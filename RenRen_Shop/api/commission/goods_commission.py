@@ -16,5 +16,5 @@ class GoodsCommission(RenRenApi):
 
     def add_commission(self, goods_id):
         client = EditGoods(self.session, **self.kwargs)
-        return client.edit_goods_by_first_level(goods_id, is_commission=1)
+        return client.edit_goods(goods_id, is_commission=1)
 

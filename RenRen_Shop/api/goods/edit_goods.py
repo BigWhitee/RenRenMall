@@ -14,6 +14,7 @@ from RenRen_Shop.api.RenRen_api import RenRenApi
 from RenRen_Shop.api.goods.add_goods import AddGoods
 from RenRen_Shop.api.goods.goods_info import GoodsInfo
 from RenRen_Shop.common.log import log
+from RenRen_Shop.common.common_fuc import exchange_params
 logger = log().logger
 
 
@@ -30,9 +31,6 @@ class EditGoods(RenRenApi):
         try:
             options = infos.pop('options')
             for option in options:
-                # key_list = ['shop_id', 'sub_shop_id', 'goods_id', 'stock_warning', 'sales', 'display_order']
-                # for each in key_list:
-                #     option.pop(each)
                 option['specs'] = option['specs'].split(',')
                 option['tmpid'] = option['id']
         except Exception as e:
@@ -57,13 +55,13 @@ class EditGoods(RenRenApi):
         }
         return data
 
-    def edit_goods(self,
-                   goods: dict,  # 商品属性
-                   spec: list,  # 多规格
-                   options: list,  # 多规格定价
-                   goods_commission: dict,  # 分销设置
-                   member_level_discount: dict  # 会员折扣信息
-                   ) -> bool:
+    def __edit_goods__(self,
+                       goods: dict,  # 商品属性
+                       spec: list,  # 多规格
+                       options: list,  # 多规格定价
+                       goods_commission: dict,  # 分销设置
+                       member_level_discount: dict  # 会员折扣信息
+                       ) -> bool:
         data = {
             'goods': json.dumps(goods),
             'spec': json.dumps(spec),
@@ -77,10 +75,10 @@ class EditGoods(RenRenApi):
         else:
             return False
 
-    def edit_goods_by_first_level(self, id, **kwargs):
+    def edit_goods(self, id, **kwargs):
         """
-        仅支持一级属性修改
-        常见修改的一级属性如下：
+        多级属性以__标明上下级关系
+        常见修改的属性如下：
         ====================
         status: 上下架  0:下架; 1:上架;
         title: 标题
@@ -105,10 +103,30 @@ class EditGoods(RenRenApi):
         dispatch_verify_point_id: 核销点ID,列表
         dispatch_verify_point_list: 核销点信息，与上一条成对存在，列表
         weight: 重量
+        ext_field__invoice: 发票
+        ext_field__show_sales: 是否展示销量
+        ext_field__show_stock: 是否展示库存
+        ext_field__exchange: 换货
+        ext_field__return: 退货
+        ext_field__refund: 退货退款
+        ext_field__is_delivery_pay: 货到付款
+        ext_field__auto_putaway: 自动上架
+        ext_field__putaway_time: 上架时间，格式："0NaN-NaN-NaN NaN:NaN:NaN",
+        ext_field__offaway_time: 下架时间，格式："0NaN-NaN-NaN NaN:NaN:NaN",
+        ext_field__option_type: 规格样式，0：纯文本；1：缩略小图；2：缩略大图
+        ext_field__single_max_buy: 单次最大购买
+        ext_field__single_max_buy: 单次最少购买
+        ext_field__max_buy: 总共最大购买
+        ext_field__buy_limit:是否开启购买权限
         is_recommand: 是否推荐 0或1
         is_hot: 是否热卖
         is_new: 是否新品
         params: 参数，list,格式如：[{'key': '产地', 'value': '大陆'},{},...]
+        category__category_id: 分类ID, 需与category_id一同修改
+        category_id: 分类ID, 需与category__category_id一同修改
+        category__sub_shop_id: 所属子店铺ID
+        give_credit_status: 是否赠送积分
+        give_credit_num: 赠送积分数量
         is_commission: 是否分销
         browse_level_perm: 会员查看权限
         browse_tag_perm: 标签组查看权限
@@ -116,6 +134,14 @@ class EditGoods(RenRenApi):
         buy_tag_perm: 标签组购买权限
         form_status: 是否插入表单
         form_id: 表单ID
+        subShopCategory: 子店铺商品分类
+        group: 商品组id
+        label: 商品标签，list,需与label_id一同修改
+        label_id: 商品标签,需与label一同修改
+        browse_level_perm_ids: 浏览权限会员等级id
+        buy_level_perm_ids: 购买权限会员等级id
+        browse_tag_perm_ids: 浏览权限会员标签id
+        buy_tag_perm_ids: 购买权限会员标签id
         ====================
 
         :param id:
@@ -125,14 +151,15 @@ class EditGoods(RenRenApi):
         get_goods_info = GoodsInfo(self.session,
                                    **self.kwargs)
         goods_infos = get_goods_info.goods_info(id)['data']
-        for index, (key, value) in enumerate(kwargs.items()):
-            goods_infos[key] = value
+        # for index, (key, value) in enumerate(kwargs.items()):
+        #     goods_infos[key] = value
+        goods_infos = exchange_params(**goods_infos)
         data = self.form_data(goods_infos)
-        rep = self.edit_goods(data['goods'],
-                              data['spec'],
-                              data['options'],
-                              data['goods_commission'],
-                              data['member_level_discount'])
+        rep = self.__edit_goods__(data['goods'],
+                                  data['spec'],
+                                  data['options'],
+                                  data['goods_commission'],
+                                  data['member_level_discount'])
         if rep:
             return True
         else:

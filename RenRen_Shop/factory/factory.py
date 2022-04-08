@@ -172,7 +172,6 @@ class Factory:
             self.add_goods = self.AddGoods.add_goods
             self.EditGoods = EditGoods(self.session, **self.kwargs)
             self.edit_goods = self.EditGoods.edit_goods
-            self.edit_goods_by_first_level = self.EditGoods.edit_goods_by_first_level
             self.FetchGoods = FetchGoodsList(self.session, **self.kwargs)
             self.GoodsInfo = GoodsInfo(self.session, **self.kwargs)
             self.goods_info = self.GoodsInfo.goods_info

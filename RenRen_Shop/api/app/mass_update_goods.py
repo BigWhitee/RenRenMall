@@ -22,7 +22,7 @@ class MassUpdateGoods(RenRenApi):
     def mash_update_goods(self, *goods_ids, **kwargs):
         Editor = EditGoods(self.session, **self.kwargs)
         for id in goods_ids:
-            if Editor.edit_goods_by_first_level(id, **kwargs):
+            if Editor.edit_goods(id, **kwargs):
                 print(f'商品:{id}批量修改属性：{kwargs.keys()}完成')
             else:
                 print(f'商品:{id}修改属性失败')

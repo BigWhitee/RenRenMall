@@ -72,7 +72,7 @@ with Factory(username='', password='') as client:
     while goods.next(keywords='零食'):
         for result in goods.result():
             id = result['id']
-            client.goods.EditGoods.edit_goods_by_first_level(id=id, is_commission=1, stock=100)
+            client.goods.EditGoods.edit_goods(id=id, is_commission=1, stock=100)
 
 ```
 代码实现将所有标题中包含【零食】的商品，统一开启分销，设置库存为100

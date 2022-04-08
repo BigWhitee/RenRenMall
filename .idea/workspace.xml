@@ -5,41 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0320431c-2aa2-4605-926c-394be34cd999" name="Changes" comment="优化">
-      <change afterPath="$PROJECT_DIR$/.idea/dictionaries/NINGMEI.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/RenRen_Shop/api/app/MySecKill.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/RenRen_Shop/api/application/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/RenRen_Shop/api/application/diypage/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/RenRen_Shop/api/application/diypage/page_content.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/RenRen_Shop/api/application/diypage/page_edit.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/RenRen_Shop/api/application/diypage/page_infos.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/RenRen_Shop/api/application/diypage/template/seckill_content_template.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/RenRen_Shop/api/application/goods_helper/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/RenRen_Shop/api/application/goods_helper/goods_helper.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/RenRen_Shop/api/application/seckill/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/RenRen_Shop/api/application/seckill/add.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/RenRen_Shop/api/application/seckill/edit.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/RenRen_Shop/api/application/seckill/infos.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/RenRen_Shop/api/application/seckill/template/goods_info.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/RenRen_Shop/api/application/seckill/template/seckill_info_template.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/RenRen_Shop/api/commission/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/RenRen_Shop/api/commission/change_agent.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/RenRen_Shop/api/commission/fetch_agent_list.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/RenRen_Shop/api/commission/fetch_commission_goods_list.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/RenRen_Shop/api/commission/goods_commission.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/RenRen_Shop/api/goods/fetch_goodsId_list_by_filter.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/RenRen_Shop/api/member/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/RenRen_Shop/api/member/fetch_member_lists.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/RenRen_Shop/api/member/member_infos.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/RenRen_Shop/api/member/member_level.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/RenRen_Shop/common/common_fuc.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test/test.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/RenRenMall.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/RenRenMall.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RenRen_Shop/api/RenRen_api.py" beforeDir="false" afterPath="$PROJECT_DIR$/RenRen_Shop/api/RenRen_api.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RenRen_Shop/api/app/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/RenRen_Shop/api/app/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RenRen_Shop/api/goods/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/RenRen_Shop/api/goods/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RenRen_Shop/api/url/url.py" beforeDir="false" afterPath="$PROJECT_DIR$/RenRen_Shop/api/url/url.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RenRen_Shop/common/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/RenRen_Shop/common/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RenRen_Shop/api/app/mass_update_goods.py" beforeDir="false" afterPath="$PROJECT_DIR$/RenRen_Shop/api/app/mass_update_goods.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RenRen_Shop/api/commission/goods_commission.py" beforeDir="false" afterPath="$PROJECT_DIR$/RenRen_Shop/api/commission/goods_commission.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RenRen_Shop/api/goods/edit_goods.py" beforeDir="false" afterPath="$PROJECT_DIR$/RenRen_Shop/api/goods/edit_goods.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/RenRen_Shop/factory/factory.py" beforeDir="false" afterPath="$PROJECT_DIR$/RenRen_Shop/factory/factory.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -368,7 +338,14 @@
       <option name="project" value="LOCAL" />
       <updated>1649218539148</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="优化">
+      <created>1649414354627</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1649414354627</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
