@@ -6,5 +6,6 @@
 @File : __init__.py.py 
 """
 from .mass_update_goods import MassUpdateGoods
+from .MySecKill import MySecKill
 
-__all__ = ['MassUpdateGoods']
+__all__ = ['MassUpdateGoods', 'MySecKill']

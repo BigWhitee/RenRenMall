@@ -64,8 +64,39 @@ class URL:
     def shop_index(self):
         return self.host + '/account/shop/list/index'
 
+    def member_list(self):
+        return self.host + '/shop/api/member/list'
 
-if __name__ == '__main__':
-    text = '3656,3659'
-    test_ = text.split(',')
-    print(text)
+    def member_level(self):
+        return self.host + '/shop/api/member/level'
+
+    def member_infos(self):
+        return self.host + '/shop/api/member/detail'
+
+    def agent_list(self):
+        return self.host + '/shop/api/apps/commission/agent'
+
+    def commission_goods_list(self):
+        return self.host + '/shop/api/apps/commission/goods/list'
+
+    def commission_cancel(self):
+        return self.host + '/shop/api/apps/commission/goods/cancel'
+
+    def change_agent(self):
+        return self.host + '/shop/api/apps/commission/agent/change-agent'
+
+    def seckill_add(self):
+        return self.host + '/shop/api/apps/seckill/index/add'
+
+    def seckill_edit(self):
+        return self.host + '/shop/api/apps/seckill/index/edit'
+
+    def seckill_infos(self):
+        return self.host + '/shop/api/apps/seckill/index/detail'
+
+    def page_edit(self):
+        return self.host + '/shop/api/apps/diypage/page/list/edit'
+
+    def goods_helper(self):
+        return self.host + '/shop/api/apps/goodsHelper'
+

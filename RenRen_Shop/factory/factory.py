@@ -20,6 +20,10 @@ from RenRen_Shop.api.photo_album import *
 from RenRen_Shop.api.app import *
 from RenRen_Shop.api.uploader import *
 from RenRen_Shop.common import *
+from RenRen_Shop.api.member import *
+from RenRen_Shop.api.commission import *
+from RenRen_Shop.api.application import *
+
 Myshop = TypeVar('Myshop', int, str)
 
 
@@ -30,7 +34,7 @@ class Factory:
         if not username:
             username = input('请输入你的用户名：\n')
         if not password:
-            password = getpass.getpass('请输入您的密码：\n')
+            password = input('请输入您的密码：\n')
         self.username = username
         self.password = password
         self.kwargs = kwargs
@@ -126,13 +130,22 @@ class Factory:
             self.shop_name = myshop
             self.shop_id = self.shop_ids[self.shop_names.index(myshop)]
         self.headers['shop-id'] = str(self.shop_id)
+        self.common = self.__Common()
         self.category = self.__Category(self.session, **self.kwargs)
         self.goods = self.__Goods(self.session, **self.kwargs)
         self.group = self.__Groups(self.session, self.shop_id, **self.kwargs)
         self.log = self.__Log(self.session, **self.kwargs)
         self.app = self.__App(self.session, **self.kwargs)
         self.upload = self.__Upload(self.session, **self.kwargs)
-        self.photo_album = self.__PhotoAlbum
+        self.photo_album = self.__PhotoAlbum(self.session, **self.kwargs)
+        self.member = self.__Member(self.session, **self.kwargs)
+        self.commission = self.__Commission(self.session, **self.kwargs)
+        self.seckill = self.__Seckill(self.session, **self.kwargs)
+
+    class __Common:
+        def __init__(self):
+            self.Time2Str = time_2_str
+            self.Str2Time = str_2_time
 
     class __Category:
         def __init__(self, session, **kwargs):
@@ -156,9 +169,15 @@ class Factory:
             self.session = session
             self.kwargs = kwargs
             self.AddGoods = AddGoods(self.session, **self.kwargs)
+            self.add_goods = self.AddGoods.add_goods
             self.EditGoods = EditGoods(self.session, **self.kwargs)
+            self.edit_goods = self.EditGoods.edit_goods
+            self.edit_goods_by_first_level = self.EditGoods.edit_goods_by_first_level
             self.FetchGoods = FetchGoodsList(self.session, **self.kwargs)
             self.GoodsInfo = GoodsInfo(self.session, **self.kwargs)
+            self.goods_info = self.GoodsInfo.goods_info
+            self.FetchGoodsIdsList = FetchGoodsIdList(self.session, **self.kwargs)
+            self.fetch_goodsIds_list = self.FetchGoodsIdsList.fetch_goodsId_list
 
     class __Groups:
         def __init__(self, session, shop_id, **kwargs):
@@ -171,9 +190,13 @@ class Factory:
             self.shop_id = shop_id
             self.kwargs = kwargs
             self.AddGroup = AddGroup(self.session, **self.kwargs)
+            self.add_group = self.AddGroup.add_group
             self.FetchGroupsList = FetchGroupsList(self.session, **self.kwargs)
             self.GroupsInfo = GroupsInfo(self.session, **self.kwargs)
+            self.groups_info = self.GroupsInfo.groups_info
             self.UpdateGroups = UpdateGroups(self.session, self.shop_id, **kwargs)
+            self.update_groups = self.UpdateGroups.update_groups
+            self.add_goods_to_groups = self.UpdateGroups.add_goods_to_groups
 
     class __Log:
         def __init__(self, session, **kwargs):
@@ -221,7 +244,52 @@ class Factory:
             self.session = session
             self.kwargs = kwargs
             self.MassUpdateGoods = MassUpdateGoods(self.session, **self.kwargs)
+            self.MySecKill = MySecKill(self.session, **self.kwargs)
 
+    class __Member:
+        def __init__(self, session, **kwargs):
+            """
+            会员功能模块
 
+            :param session:
+            :param keyword:
+            """
+            self.session = session
+            self.kwargs = kwargs
+            self.FetchMemberList = FetchMemberList(self.session, **self.kwargs)
+            self.MemberLevel = MemberLevel(self.session, **self.kwargs)
+            self.member_level = self.MemberLevel.member_levels_list
+            self.MemberInofs = Memberinfos(self.session, **self.kwargs)
+            self.member_infos = self.MemberInofs.memer_infos
 
+    class __Commission:
+        def __init__(self, session, **kwargs):
+            """
+            分销功能模块
 
+            :param session:
+            :param kwargs:
+            """
+            self.session = session
+            self.kwargs = kwargs
+            self.FetchAgentsList = FetchAgentsList(self.session, **self.kwargs)
+            self.ChangeAgent = ChangeAgent(self.session, **self.kwargs)
+            self.change_agent = self.ChangeAgent.change_agent
+            self.GoodsCommission = GoodsCommission(self.session, **self.kwargs)
+            self.cancel_goods_commission = self.GoodsCommission.cancel_commission
+            self.add_goods_commission = self.GoodsCommission.add_commission
+
+    class __Seckill:
+        def __init__(self, session, **kwargs):
+            """
+            秒杀功能模块
+
+            :param session:
+            :param kwargs:
+            """
+            self.session = session
+            self.kwargs = kwargs
+            self.SeckillAdd = SecKillAdd(self.session, **self.kwargs)
+            self.seckill_add = self.SeckillAdd.add
+            self.SeckillEdit = SecKillEdit(self.session, **self.kwargs)
+            self.seckill_edit = self.SeckillEdit.edit

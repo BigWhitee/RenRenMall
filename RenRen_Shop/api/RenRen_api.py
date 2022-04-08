@@ -5,12 +5,17 @@
 @description : 
 @File : RenRen_api.py
 """
+import requests
 
 from RenRen_Shop.api.url.url import URL
 
 
 class RenRenApi:
-    def __init__(self, session, **kwargs):
+    """
+    __init__复用
+
+    """
+    def __init__(self, session: requests.Session, **kwargs):
         self.session = session
         self.URL = URL()
         self.kwargs = kwargs
