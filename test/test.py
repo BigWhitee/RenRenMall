@@ -13,5 +13,5 @@ from RenRen_Shop.factory import Factory
 
 if __name__ == '__main__':
     with Factory() as client:
-        if client.commission.add_goods_commission(9582):
+        if client.goods.edit_goods(10844, options__0__price=70):
             client.logger.info('Done!')

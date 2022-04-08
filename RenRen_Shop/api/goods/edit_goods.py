@@ -93,6 +93,16 @@ class EditGoods(RenRenApi):
         real_sales: 真实销量
         price: 价格
         has_option: 是否多规格
+        options: 规格，list[dict[str, any]]
+        options__[num]__title: sku名称
+        options__[num]__thumb: sku缩略图
+        options__[num]__price: sku售价
+        options__[num]__cost_price: sku成本
+        options__[num]__original_price: sku划线价
+        options__[num]__stock: sku库存
+        options__[num]__stock_warning: sku库存预警
+        options__[num]__sales: sku销量
+        options__[num]__weight: sku重量
         content: 详情图
         dispatch_express: 是否开启快递配送
         dispatch_type: 物流方式 0：包邮 1：默认模板 2：统一运费
@@ -118,6 +128,7 @@ class EditGoods(RenRenApi):
         ext_field__single_max_buy: 单次最少购买
         ext_field__max_buy: 总共最大购买
         ext_field__buy_limit:是否开启购买权限
+        ext_field__note: 商品备注
         is_recommand: 是否推荐 0或1
         is_hot: 是否热卖
         is_new: 是否新品
@@ -138,10 +149,14 @@ class EditGoods(RenRenApi):
         group: 商品组id
         label: 商品标签，list,需与label_id一同修改
         label_id: 商品标签,需与label一同修改
-        browse_level_perm_ids: 浏览权限会员等级id
-        buy_level_perm_ids: 购买权限会员等级id
-        browse_tag_perm_ids: 浏览权限会员标签id
-        buy_tag_perm_ids: 购买权限会员标签id
+        perm_data__browse__member_level: 浏览权限会员等级id, list
+        perm_data__browse__member_tag: 浏览权限会员标签id, list
+        perm_data__buy__member_level: 购买权限会员等级id, list
+        perm_data__buy__member_tag: 购买权限会员标签id, list
+        browse_level_perm: "0",是否开启会员等级浏览权限
+        browse_tag_perm: "0",是否开启会员标签组浏览权限
+        buy_level_perm: "0",是否开启会员等级购买权限
+        buy_tag_perm: "0",是否开启会员标签组购买权限
         ====================
 
         :param id:
@@ -153,7 +168,7 @@ class EditGoods(RenRenApi):
         goods_infos = get_goods_info.goods_info(id)['data']
         # for index, (key, value) in enumerate(kwargs.items()):
         #     goods_infos[key] = value
-        goods_infos = exchange_params(**goods_infos)
+        goods_infos = exchange_params(goods_infos, **kwargs)
         data = self.form_data(goods_infos)
         rep = self.__edit_goods__(data['goods'],
                                   data['spec'],

@@ -1,80 +1,85 @@
 {
-     "id": "9667",
+     "id": "10844",
      "shop_id": "480",
      "sub_shop_id": "0",
      "status": "1",
      "is_deleted": "0",
-     "title": "渔米之湘鱿鱼须30包香辣味零食小吃湖南特产鱿鱼丝即食休闲食品",
-     "sub_title": "渔米之湘鱿鱼须30包香辣味零食小吃湖南特产鱿鱼丝即食休闲食品",
-     "short_title": "渔米之湘鱿鱼须",
+     "title": "啤酒开瓶器冰箱贴多功能磁贴创意篮球灌篮高手篮筐壁挂启瓶器起子",
+     "sub_title": "灌篮高手篮筐瓶器起子",
+     "short_title": "",
      "type": "0",
-     "thumb": "image/480/2022/04/19e84e22fddfe65bea15068a1a5533c9.jpeg",
+     "thumb": "image/480/2022/04/c83daea677b44a85694918abd8622210.jpg",
      "thumb_all": [
-          "image/480/2022/04/472183c979802a0f079aeb9fb9f0fd4f.jpeg",
-          "image/480/2022/04/aa6516198ab9bac3aeb7e35e11eb84f1.jpeg",
-          "image/480/2022/04/09e584de4b6da391c22d32fe0f794096.jpeg",
-          "image/480/2022/04/09b81c6655adce26b67a5b34e5c30a4a.jpeg",
-          "image/480/2022/04/bcec7dba382d9d2959084e5bdffe21df.jpeg"
+          "image/480/2022/04/c83daea677b44a85694918abd8622210.jpg",
+          "image/480/2022/04/4ca97dda9fdeeb3c85c8cbc1b12b97e9.png",
+          "image/480/2022/04/48f61778739bf52df74bba559165c289.jpg"
      ],
-     "video": "",
+     "video": "video/480/2022/04/6ec33808aff8abae7594eda52e78958a.mp4",
      "video_thumb": "",
      "video_type": "0",
      "unit": "件",
      "goods_code": "",
      "bar_code": "",
-     "display_order": "0",
+     "display_order": "3",
      "stock": "0",
      "reduction_type": "0",
-     "sales": "50",
-     "real_sales": "1",
+     "sales": "0",
+     "real_sales": "0",
      "price": "0",
-     "min_price": "7.90",
-     "max_price": "11.90",
-     "cost_price": "6.40",
-     "original_price": "0.00",
+     "min_price": "38.00",
+     "max_price": "288.00",
+     "cost_price": "38.00",
+     "original_price": "38.00",
      "has_option": "1",
-     "content": "<p><img style=\"width: 100% !important; vertical-align: top;\" src=\"image/480/2022/04/c8dba7737899611a4ab44b405e641b61.jpeg\" /><img style=\"width: 100% !important; vertical-align: top;\" src=\"image/480/2022/04/26d04804144a5fc112ccf0014a91441e.jpeg\" /><img style=\"width: 100% !important; vertical-align: top;\" src=\"image/480/2022/04/189e6a101f5c462fe8280dbc42f7df7a.jpeg\" /><img style=\"width: 100% !important; vertical-align: top;\" src=\"image/480/2022/04/b5b3d37f74e4abba7d58c332d5dab91c.jpeg\" /><img style=\"width: 100% !important; vertical-align: top;\" src=\"image/480/2022/04/18d1914271ab81c0dfa5e18841234671.jpeg\" /><img style=\"width: 100% !important; vertical-align: top;\" src=\"image/480/2022/04/2ee304251388c8d1be47652e350442bb.jpeg\" /></p>",
-     "dispatch_type": "1",
+     "content": "<p style=\"text-align: center;\">&nbsp;</p>\n<p style=\"text-align: center;\">&nbsp;</p>\n<p style=\"text-align: center;\"><img style=\"width: 100% !important; vertical-align: top;\" src=\"image/480/2022/04/c50574ce5fbf7f4bedb5a0e326e17fd1.jpg\" /></p>\n<p style=\"text-align: center;\"><img style=\"width: 100% !important; vertical-align: top;\" src=\"image/480/2022/04/4c8f4115c72d76084c71404fad7287b5.jpg\" /></p>\n<p style=\"text-align: center;\"><img style=\"width: 100% !important; vertical-align: top;\" src=\"image/480/2022/04/0cc9e749b6e47045bc512f5d0e914c35.jpg\" /></p>\n<p style=\"text-align: center;\"><img style=\"width: 100% !important; vertical-align: top;\" src=\"image/480/2022/04/97d569382e088640584edbf43a184ba0.jpg\" /></p>\n<p style=\"text-align: center;\"><img style=\"width: 100% !important; vertical-align: top;\" src=\"image/480/2022/04/2fdd651d7844be0a368b7ecd4abd2bfd.jpg\" /></p>\n<p style=\"text-align: center;\"><img style=\"width: 100% !important; vertical-align: top;\" src=\"image/480/2022/04/4e04daa53e36f9294373ce6dce2e828c.png\" /></p>\n<p style=\"text-align: center;\"><img style=\"width: 100% !important; vertical-align: top;\" src=\"image/480/2022/04/e62fcb55724f907fb9990dcb3a7ffe44.png\" /></p>\n<p style=\"text-align: center;\"><img style=\"width: 100% !important; vertical-align: top;\" src=\"image/480/2022/04/f41a5c8520b08e695d49585492cf433c.jpg\" /></p>\n<p style=\"text-align: center;\"><img style=\"width: 100% !important; vertical-align: top;\" src=\"image/480/2022/04/5c3026024a2d1dc7d104fd27e8ea3468.jpg\" /></p>\n<p style=\"text-align: center;\"><img style=\"width: 100% !important; vertical-align: top;\" src=\"image/480/2022/04/98621fb470078042b0a862c7bae68c96.jpg\" /></p>\n<p style=\"text-align: center;\"><img style=\"width: 100% !important; vertical-align: top;\" src=\"image/480/2022/04/a7fa53b63061260478bae6183200d607.jpg\" /></p>\n<p style=\"text-align: center;\"><img style=\"width: 100% !important; vertical-align: top;\" src=\"image/480/2022/04/a99b9cf1aab415379173023201cf4d2b.jpg\" /></p>\n<p style=\"text-align: center;\"><img style=\"width: 100% !important; vertical-align: top;\" src=\"image/480/2022/04/9edb21e89af205247724feb92dc5f49b.jpg\" /></p>\n<p style=\"text-align: center;\"><img style=\"width: 100% !important; vertical-align: top;\" src=\"image/480/2022/04/7d95deb3b924690b87623b820d8bb744.jpg\" /></p>\n<p style=\"text-align: center;\"><img style=\"width: 100% !important; vertical-align: top;\" src=\"image/480/2022/04/8e4643391495b4a03204b67c4e0096a1.jpg\" /></p>\n<p style=\"text-align: center;\"><img style=\"width: 100% !important; vertical-align: top;\" src=\"image/480/2022/04/7b6371a3788750e9407c6f0c74410398.png\" /></p>",
+     "dispatch_type": "0",
      "dispatch_price": "0.00",
-     "dispatch_id": "86",
+     "dispatch_id": "0",
      "weight": "0",
      "ext_field": {
           "show_sales": "0",
           "show_stock": "1",
           "invoice": "0",
-          "refund": "1",
-          "return": "1",
-          "exchange": "1",
+          "refund": "0",
+          "return": "0",
+          "exchange": "0",
           "is_delivery_pay": "0",
           "auto_putaway": "0",
-          "single_max_buy": "",
-          "single_min_buy": "",
-          "max_buy": "",
-          "buy_limit": "0",
           "putaway_time": "0NaN-NaN-NaN NaN:NaN:NaN",
-          "offaway_time": "0NaN-NaN-NaN NaN:NaN:NaN",
-          "share_title_type": "0",
-          "deduction_gift_card_type": "0",
-          "deduction_gift_card": "",
-          "deduction_gift_card_repeat": "0",
-          "note": "",
+          "buy_limit": "0",
           "goods_stock_warning_type": 1,
           "stock_warning_type": 1,
           "stock_warning_number": "",
           "stock_warning_scale": "",
-          "warehouseSettings": "",
           "option_type": "0",
           "buy_button_settings": "",
-          "buy_button_type": "0"
+          "buy_button_type": "0",
+          "warehouseSettings": "",
+          "share_title_type": "0",
+          "deduction_gift_card_type": "0",
+          "offaway_time": "0NaN-NaN-NaN NaN:NaN:NaN",
+          "note": "https://text.com"
      },
-     "is_recommand": "1",
+     "is_recommand": "0",
      "is_hot": "1",
-     "is_new": "1",
+     "is_new": "0",
      "params_switch": "1",
      "params": [
           {
-               "key": "厂名",
-               "value": "湖南渔米之湘食品有限公司"
+               "key": "颜色分类",
+               "value": "多款式"
+          },
+          {
+               "key": "毛重",
+               "value": "480G"
+          },
+          {
+               "key": "主图来源",
+               "value": "自主实拍图"
+          },
+          {
+               "key": "适用对象",
+               "value": "啤酒"
           }
      ],
      "deduction_credit_type": "0",
@@ -83,7 +88,7 @@
      "deduction_balance_type": "0",
      "deduction_balance": "0.00",
      "deduction_balance_repeat": "0",
-     "view_count": "12",
+     "view_count": "0",
      "single_full_unit_switch": "0",
      "single_full_unit": "0",
      "single_full_quota_switch": "0",
@@ -93,7 +98,7 @@
      "buy_level_perm": "0",
      "buy_tag_perm": "0",
      "member_level_discount_type": "1",
-     "is_commission": "1",
+     "is_commission": "0",
      "auto_deliver": "0",
      "auto_deliver_content": "",
      "dispatch_express": "1",
@@ -101,16 +106,23 @@
      "form_status": "0",
      "form_id": "",
      "is_checked": "0",
-     "dispatch_verify": "1",
+     "dispatch_verify": "0",
      "is_all_verify": "0",
      "virtual_account_id": "0",
      "give_credit_status": "0",
      "give_credit_num": "0",
      "category": [
           {
-               "id": "46840",
-               "goods_id": "9667",
-               "category_id": "3396",
+               "id": "49858",
+               "goods_id": "10844",
+               "category_id": "3393",
+               "shop_id": "480",
+               "sub_shop_id": "0"
+          },
+          {
+               "id": "49859",
+               "goods_id": "10844",
+               "category_id": "3394",
                "shop_id": "480",
                "sub_shop_id": "0"
           }
@@ -119,53 +131,33 @@
      "group": "",
      "label": [
           {
-               "label_id": "1104",
-               "goods_id": "9667",
+               "label_id": "-1",
+               "goods_id": "10844",
                "shop_id": "480"
           },
           {
-               "label_id": "1105",
-               "goods_id": "9667",
+               "label_id": "-2",
+               "goods_id": "10844",
                "shop_id": "480"
           },
           {
-               "label_id": "1106",
-               "goods_id": "9667",
+               "label_id": "-3",
+               "goods_id": "10844",
                "shop_id": "480"
           }
      ],
      "category_id": [
-          "3396"
+          "3393",
+          "3394"
      ],
      "label_id": [
-          "1104",
-          "1105",
-          "1106"
+          "-1",
+          "-2",
+          "-3"
      ],
      "commission": {
-          "id": "1908",
-          "shop_id": "480",
-          "sub_shop_id": "0",
-          "goods_id": "9667",
-          "has_option": "0",
-          "type": "0",
           "commission_rule": null
      },
-     "dispatch_verify_point_id": [
-          "106"
-     ],
-     "dispatch_verify_point_list": [
-          {
-               "id": "106",
-               "title": "瑞丰里青友公寓自提点",
-               "mobile": "05925257123",
-               "address": "瑞丰里商业广场",
-               "province": "福建省",
-               "city": "厦门市",
-               "area": "湖里区",
-               "checked": true
-          }
-     ],
      "buy_button_settings": {
           "name": "立即购买",
           "click_type": "1",
@@ -182,8 +174,10 @@
      },
      "buy_button_type": "0",
      "warehouse_id": null,
-     "browse_level_perm_ids": "",
-     "buy_level_perm_ids": "",
+     "dispatch_verify_point_list": "",
+     "dispatch_verify_point_id": [],
      "browse_tag_perm_ids": "",
-     "buy_tag_perm_ids": ""
+     "buy_tag_perm_ids": "",
+     "browse_level_perm_ids": "",
+     "buy_level_perm_ids": ""
 }
