@@ -6,10 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="0320431c-2aa2-4605-926c-394be34cd999" name="Changes" comment="优化">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RenRen_Shop/api/goods/edit_goods.py" beforeDir="false" afterPath="$PROJECT_DIR$/RenRen_Shop/api/goods/edit_goods.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RenRen_Shop/api/goods/template/goods_edit_template.json" beforeDir="false" afterPath="$PROJECT_DIR$/RenRen_Shop/api/goods/template/goods_edit_template.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RenRen_Shop/common/common_fuc.py" beforeDir="false" afterPath="$PROJECT_DIR$/RenRen_Shop/common/common_fuc.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/test.py" beforeDir="false" afterPath="$PROJECT_DIR$/test/test.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -351,7 +348,14 @@
       <option name="project" value="LOCAL" />
       <updated>1649417526896</updated>
     </task>
-    <option name="localTasksCounter" value="24" />
+    <task id="LOCAL-00024" summary="优化">
+      <created>1649423707007</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1649423707008</updated>
+    </task>
+    <option name="localTasksCounter" value="25" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">

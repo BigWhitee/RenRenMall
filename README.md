@@ -63,6 +63,16 @@ with Factory(username='你的账号', password='你的密码') as client:
     goods.next(status=0)  # 增加筛选条件
     print(goods.result()) # 获取商品列表，翻页调用next()
 ```
+以下代码实现将商品10844的第一个sku售价调整为70元
+```python
+from RenRen_Shop.factory import Factory
+
+if __name__ == '__main__':
+    with Factory(username='', password='') as client:
+        if client.goods.edit_goods(10844, options__0__price=70):
+            client.logger.info('Done!')
+```
+
 批量管理实例：
 ```python
 from RenRen_Shop.factory import Factory
