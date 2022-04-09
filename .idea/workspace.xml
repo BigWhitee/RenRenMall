@@ -4,9 +4,23 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0320431c-2aa2-4605-926c-394be34cd999" name="Changes" comment="优化">
+    <list default="true" id="0320431c-2aa2-4605-926c-394be34cd999" name="Changes" comment="商品属性支持多级嵌套字典属性修改，例如单sku价格修改">
+      <change afterPath="$PROJECT_DIR$/RenRen_Shop/api/application/diypage/template/content_template.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/RenRen_Shop/api/goods/filter_goods.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RenRen_Shop/MyLog/log.log" beforeDir="false" afterPath="$PROJECT_DIR$/RenRen_Shop/MyLog/log.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RenRen_Shop/api/app/mass_update_goods.py" beforeDir="false" afterPath="$PROJECT_DIR$/RenRen_Shop/api/app/mass_update_goods.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RenRen_Shop/api/goods/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/RenRen_Shop/api/goods/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RenRen_Shop/api/goods/edit_goods.py" beforeDir="false" afterPath="$PROJECT_DIR$/RenRen_Shop/api/goods/edit_goods.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RenRen_Shop/api/goods/fetch_goods_list.py" beforeDir="false" afterPath="$PROJECT_DIR$/RenRen_Shop/api/goods/fetch_goods_list.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RenRen_Shop/api/goods/goods_info.py" beforeDir="false" afterPath="$PROJECT_DIR$/RenRen_Shop/api/goods/goods_info.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RenRen_Shop/api/group/fetch_groups_list.py" beforeDir="false" afterPath="$PROJECT_DIR$/RenRen_Shop/api/group/fetch_groups_list.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RenRen_Shop/api/log/fetch_log_list.py" beforeDir="false" afterPath="$PROJECT_DIR$/RenRen_Shop/api/log/fetch_log_list.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RenRen_Shop/api/member/fetch_member_lists.py" beforeDir="false" afterPath="$PROJECT_DIR$/RenRen_Shop/api/member/fetch_member_lists.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RenRen_Shop/api/url/url.py" beforeDir="false" afterPath="$PROJECT_DIR$/RenRen_Shop/api/url/url.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RenRen_Shop/configs/configs.py" beforeDir="false" afterPath="$PROJECT_DIR$/RenRen_Shop/configs/configs.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RenRen_Shop/factory/factory.py" beforeDir="false" afterPath="$PROJECT_DIR$/RenRen_Shop/factory/factory.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/test.py" beforeDir="false" afterPath="$PROJECT_DIR$/test/test.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -63,7 +77,7 @@
     </key>
   </component>
   <component name="RunManager" selected="Python.test">
-    <configuration name="main" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="filter_goods" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="RenRenMall" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -71,11 +85,11 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/RenRen_Shop/api/goods" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/main.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/RenRen_Shop/api/goods/filter_goods.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -126,27 +140,6 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="test (1)" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="RenRenMall" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/test.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
     <configuration name="test" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="RenRenMall" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -168,13 +161,34 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="url" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="RenRenMall" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/RenRen_Shop/api/url" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/RenRen_Shop/api/url/url.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <recent_temporary>
       <list>
         <item itemvalue="Python.test" />
+        <item itemvalue="Python.filter_goods" />
+        <item itemvalue="Python.url" />
         <item itemvalue="Python.page_content" />
         <item itemvalue="Python.setup" />
-        <item itemvalue="Python.test (1)" />
-        <item itemvalue="Python.main" />
       </list>
     </recent_temporary>
   </component>
@@ -355,7 +369,14 @@
       <option name="project" value="LOCAL" />
       <updated>1649423707008</updated>
     </task>
-    <option name="localTasksCounter" value="25" />
+    <task id="LOCAL-00025" summary="商品属性支持多级嵌套字典属性修改，例如单sku价格修改">
+      <created>1649423983058</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1649423983058</updated>
+    </task>
+    <option name="localTasksCounter" value="26" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -371,6 +392,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="优化" />
-    <option name="LAST_COMMIT_MESSAGE" value="优化" />
+    <MESSAGE value="商品属性支持多级嵌套字典属性修改，例如单sku价格修改" />
+    <option name="LAST_COMMIT_MESSAGE" value="商品属性支持多级嵌套字典属性修改，例如单sku价格修改" />
   </component>
 </project>
