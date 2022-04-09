@@ -13,5 +13,6 @@ from RenRen_Shop.factory import Factory
 
 if __name__ == '__main__':
     with Factory() as client:
-        if client.goods.edit_goods(10844, options__0__price=70):
-            client.logger.info('Done!')
+        goods_ids = client.goods.filter_goods('real_sales', 2, '>')
+        client.logger.info(f'筛选出的数量总数为：{len(goods_ids)}')
+        print(goods_ids)
