@@ -22,7 +22,7 @@ class FetchLogList(Fetch):
         self.first = self.URL.log_list()
         self.Temp = {
             'page': 1,
-            'pagesize': 10,
+            'pagesize': 100,
         }
         self.is_end = False
         self.next_page = 1
