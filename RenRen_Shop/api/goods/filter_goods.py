@@ -41,7 +41,9 @@ class FilterGoods(RenRenApi):
         if level_count == 1:
             if judge == '=':
                 return True if data[key_split[0]] == value else False
-            if judge == '<':
+            elif judge == '!=':
+                return True if data[key_split[0]] != value else False
+            elif judge == '<':
                 return True if float(data[key_split[0]]) < float(value) else False
             elif judge == '>':
                 return True if float(data[key_split[0]]) > float(value) else False
@@ -53,7 +55,9 @@ class FilterGoods(RenRenApi):
         elif level_count == 2:
             if judge == '=':
                 return True if data[key_split[0]][key_split[1]] == value else False
-            if judge == '<':
+            elif judge == '!=':
+                return True if data[key_split[0]][key_split[1]] != value else False
+            elif judge == '<':
                 return True if float(data[key_split[0]][key_split[1]]) < float(value) else False
             elif judge == '>':
                 return True if float(data[key_split[0]][key_split[1]]) > float(value) else False
@@ -70,7 +74,12 @@ class FilterGoods(RenRenApi):
                             return True
                         else:
                             continue
-                    if judge == '<':
+                    elif judge == '!=':
+                        if each[key_split[2]] != value:
+                            return True
+                        else:
+                            continue
+                    elif judge == '<':
                         if float(each[key_split[2]]) < float(value):
                             return True
                         else:
@@ -181,7 +190,7 @@ class FilterGoods(RenRenApi):
         ====================
 
         :param return_type: 返回的数据形式，0:goods_ids, 1:goods_infos
-        :param judge: 对比方法，取值可为 'equal', 'less', 'more', 'between'
+        :param judge: 对比方法，取值可为 '=', '<', '>', '><', '!='
         :param value: 对比的内容
         :param key: 要判断的key
         :param split:

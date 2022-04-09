@@ -4,9 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0320431c-2aa2-4605-926c-394be34cd999" name="Changes" comment="自生成">
+    <list default="true" id="0320431c-2aa2-4605-926c-394be34cd999" name="Changes" comment="增加商品列表获取排序功能">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RenRen_Shop/api/goods/fetch_goods_list.py" beforeDir="false" afterPath="$PROJECT_DIR$/RenRen_Shop/api/goods/fetch_goods_list.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RenRen_Shop/api/goods/filter_goods.py" beforeDir="false" afterPath="$PROJECT_DIR$/RenRen_Shop/api/goods/filter_goods.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -481,7 +481,14 @@
       <option name="project" value="LOCAL" />
       <updated>1649483185833</updated>
     </task>
-    <option name="localTasksCounter" value="43" />
+    <task id="LOCAL-00043" summary="增加商品列表获取排序功能">
+      <created>1649484301220</created>
+      <option name="number" value="00043" />
+      <option name="presentableId" value="LOCAL-00043" />
+      <option name="project" value="LOCAL" />
+      <updated>1649484301220</updated>
+    </task>
+    <option name="localTasksCounter" value="44" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -511,6 +518,7 @@
     <MESSAGE value="工作空间" />
     <MESSAGE value="暴露goods功能接口" />
     <MESSAGE value="自生成" />
-    <option name="LAST_COMMIT_MESSAGE" value="自生成" />
+    <MESSAGE value="增加商品列表获取排序功能" />
+    <option name="LAST_COMMIT_MESSAGE" value="增加商品列表获取排序功能" />
   </component>
 </project>
