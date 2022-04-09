@@ -10,6 +10,7 @@ from .goods_info import GoodsInfo
 from .edit_goods import EditGoods
 from .fetch_goods_list import FetchGoodsList
 from .fetch_goodsId_list_by_filter import FetchGoodsIdList
+from .filter_goods import FilterGoods
 
 
-__all__ = ['AddGoods', 'GoodsInfo', 'EditGoods', 'FetchGoodsList', 'FetchGoodsIdList']
+__all__ = ['AddGoods', 'GoodsInfo', 'EditGoods', 'FetchGoodsList', 'FetchGoodsIdList', 'FilterGoods']
