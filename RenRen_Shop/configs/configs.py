@@ -7,3 +7,5 @@
 """
 USERNAME = 'username'
 PASSWORD = 'password'
+HOST = 'https://rr.hanchenshop.com'
+DELAY = 0.5
