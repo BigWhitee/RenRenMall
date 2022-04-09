@@ -5,10 +5,12 @@
 @description : 批量修改商品属性
 @File : mass_update_goods.py
 """
+import time
+
 from RenRen_Shop.api.RenRen_api import RenRenApi
 from RenRen_Shop.api.goods.fetch_goods_list import FetchGoodsList
 from RenRen_Shop.api.goods.edit_goods import EditGoods
-
+from RenRen_Shop.configs.configs import DELAY
 
 class MassUpdateGoods(RenRenApi):
     def fetcha_goods(self, **kwargs):
@@ -26,4 +28,5 @@ class MassUpdateGoods(RenRenApi):
                 print(f'商品:{id}批量修改属性：{kwargs.keys()}完成')
             else:
                 print(f'商品:{id}修改属性失败')
+            time.sleep(DELAY)  # 防止ip封禁
 
