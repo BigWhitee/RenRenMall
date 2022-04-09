@@ -180,5 +180,44 @@ class EditGoods(RenRenApi):
         else:
             return False
 
+    def edit_goods_quick(self, goods_id, field, value):
+        """
+        商城自带简单快捷商品属性修改
+        ====================
+        id: goods_id
+        field: 修改部分，可选值：title, is_recommand, is_hot, is_new
+        value: 修改的内容
+        ====================
+
+        :return:
+        """
+        data = {
+            'id': goods_id,
+            'field': field,
+            'value': value
+        }
+        rep = self.session.post(self.URL.edit_goods_quick(), data=data, **self.kwargs)
+        return True if rep.json()['error'] == 0 else False
+
+    def edit_goods_sku(self, **kwargs):
+        """
+        商城自带商品sku价格库存修改
+        参数如下：
+        ===============================
+        goods_id: 商品id
+        options[0][id]: 第一个sku的id
+        options[0][price]: 第一个sku的价格
+        options[0][stock]: 第一个sku的库存
+        options[1][id]: 第二个sku的id
+        options[1][price]: 第二个sku的价格
+        options[1][stock]: 第二个sku的库存
+        ......
+        (其余依次类推，需全部囊括)
+        ===============================
+
+        :return:
+        """
+        rep = self.session.post(self.URL.edit_goods_sku(), data=kwargs, **self.kwargs)
+        return True if rep.json()['error'] == 0 else False
 
 
