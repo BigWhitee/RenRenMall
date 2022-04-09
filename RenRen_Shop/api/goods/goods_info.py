@@ -10,8 +10,8 @@ from RenRen_Shop.api.RenRen_api import RenRenApi
 
 
 class GoodsInfo(RenRenApi):
-    def goods_info(self, id):
-        rep = self.session.get(self.URL.goods_info(), params={'id': id})
+    def goods_info(self, goods_id):
+        rep = self.session.get(self.URL.goods_info(), params={'id': goods_id}, **self.kwargs)
         return rep.json()
 
 
