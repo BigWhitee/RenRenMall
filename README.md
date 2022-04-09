@@ -8,9 +8,12 @@
 ## 说明
 该项目基于人人商城代理商韩辰科技所属域名地址，下版本会适配人人商城不同代理商
 
-## 预告
-版本更新计划
-- [ ] 适配各代理商
+## 版本更新计划
+- [x] 适配各代理商
+- [x] 商品全属性编辑
+- [x] 商品全属性筛选
+- [x] 商品采集模块
+- [ ] 页面编辑
 - [ ] 评论模块
 - [ ] 应用模块
 - [ ] 待补充...
@@ -52,7 +55,7 @@ AddAlbum : 增加图片分组<br>
 ```python
 from RenRen_Shop.factory import Factory
 
-with Factory(username='你的账号', password='你的密码') as client:
+with Factory(username='你的账号', password='你的密码', host='代理商主机地址') as client:
     print(client.shop_ids)  # 拥有管理权的店铺ID列表
     print(client.shop_names)  # 拥有管理权的店铺列表
     print(client.shop_id)  # 当前管理的店铺ID,初始化默认使用第一个店铺
