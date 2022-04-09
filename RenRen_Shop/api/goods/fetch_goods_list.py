@@ -73,6 +73,10 @@ class FetchGoodsList(Fetch):
 
         type: 类型，值为 all, 0, 1, 2, 3, 4, 5
 
+        sort: 按需排序，real_sales, create_time
+
+        by:排序方式 asc：正序， desc：倒序
+
         audit_status: 审核状态
 
         sub_shop_name: 子店铺名

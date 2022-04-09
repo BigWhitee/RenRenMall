@@ -4,9 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0320431c-2aa2-4605-926c-394be34cd999" name="Changes" comment="暴露goods功能接口">
+    <list default="true" id="0320431c-2aa2-4605-926c-394be34cd999" name="Changes" comment="自生成">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/setup.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RenRen_Shop/api/goods/fetch_goods_list.py" beforeDir="false" afterPath="$PROJECT_DIR$/RenRen_Shop/api/goods/fetch_goods_list.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -474,7 +474,14 @@
       <option name="project" value="LOCAL" />
       <updated>1649483112763</updated>
     </task>
-    <option name="localTasksCounter" value="42" />
+    <task id="LOCAL-00042" summary="自生成">
+      <created>1649483185833</created>
+      <option name="number" value="00042" />
+      <option name="presentableId" value="LOCAL-00042" />
+      <option name="project" value="LOCAL" />
+      <updated>1649483185833</updated>
+    </task>
+    <option name="localTasksCounter" value="43" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -503,6 +510,7 @@
     <MESSAGE value="增加url访问接口" />
     <MESSAGE value="工作空间" />
     <MESSAGE value="暴露goods功能接口" />
-    <option name="LAST_COMMIT_MESSAGE" value="暴露goods功能接口" />
+    <MESSAGE value="自生成" />
+    <option name="LAST_COMMIT_MESSAGE" value="自生成" />
   </component>
 </project>
