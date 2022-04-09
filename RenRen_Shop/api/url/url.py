@@ -5,8 +5,6 @@
 @description : 
 @File : url.py 
 """
-import random
-import time
 
 
 class URL:
@@ -33,6 +31,12 @@ class URL:
 
     def edit_goods(self):
         return self.host + f'/shop/api/goods/index/edit'
+
+    def edit_goods_quick(self):
+        return self.host + '/shop/api/goods/index/property'
+
+    def edit_goods_sku(self):
+        return self.host + '/shop/api/goods/operation/set-price-and-stock'
 
     def category_list(self):
         return self.host + f'/shop/api/goods/category/get-list'
