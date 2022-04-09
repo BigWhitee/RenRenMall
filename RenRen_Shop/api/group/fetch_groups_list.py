@@ -20,7 +20,7 @@ class FetchGroupsList(Fetch):
         super().__init__(session, **kwargs)
         self.first = self.URL.group_list()
         self.Temp = {
-            'pagesize': 10,
+            'pagesize': 100,
             'page': 1,
             'pager': 1,
             'name': '',
