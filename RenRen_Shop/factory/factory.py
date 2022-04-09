@@ -24,13 +24,14 @@ from RenRen_Shop.api.member import *
 from RenRen_Shop.api.commission import *
 from RenRen_Shop.api.application import *
 
+
 Myshop = TypeVar('Myshop', int, str)
 
 
 class Factory:
     logger = log().logger
 
-    def __init__(self, username=None, password=None, **kwargs):
+    def __init__(self, username=None, password=None, host=None, **kwargs):
         if not username:
             username = input('请输入你的用户名：\n')
         if not password:
@@ -40,6 +41,8 @@ class Factory:
         self.kwargs = kwargs
         self.session = requests.Session()
         self.URL = URL()
+        if host:
+            self.URL.host = host
         self.headers = {
             'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) '
                           'Chrome/100.0.4896.60 Safari/537.36',
@@ -172,11 +175,15 @@ class Factory:
             self.add_goods = self.AddGoods.add_goods
             self.EditGoods = EditGoods(self.session, **self.kwargs)
             self.edit_goods = self.EditGoods.edit_goods
+            self.edit_goods_quick = self.EditGoods.edit_goods_quick
+            self.edit_goods_sku = self.EditGoods.edit_goods_sku
             self.FetchGoods = FetchGoodsList(self.session, **self.kwargs)
             self.GoodsInfo = GoodsInfo(self.session, **self.kwargs)
             self.goods_info = self.GoodsInfo.goods_info
             self.FetchGoodsIdsList = FetchGoodsIdList(self.session, **self.kwargs)
             self.fetch_goodsIds_list = self.FetchGoodsIdsList.fetch_goodsId_list
+            self.FilterGoods = FilterGoods(self.session, **self.kwargs)
+            self.filter_goods = self.FilterGoods.filter_goods
 
     class __Groups:
         def __init__(self, session, shop_id, **kwargs):
