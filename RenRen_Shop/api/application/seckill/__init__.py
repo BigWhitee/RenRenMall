@@ -7,5 +7,8 @@
 """
 from .add import Add
 from .edit import Edit
+from .infos import Infos
+from .delete import Delete
+from .fetch_list import List
 
-__all__ = ['Add', 'Edit']
+__all__ = ['Add', 'Edit', 'Infos', 'Delete', 'List']
