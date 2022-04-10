@@ -160,7 +160,10 @@ class Factory:
             """
             self.session = session
             self.kwargs = kwargs
-            self.Category = Category(self.session, **self.kwargs)
+            self.CategoryList = CategoryList(self.session, **self.kwargs)
+            self.category_list = self.CategoryList.category_list
+            self.SetCategory = SetCategory(self.session, **self.kwargs)
+            self.set_category = self.SetCategory.set_category
 
     class __Goods:
         def __init__(self, session, **kwargs):
@@ -184,6 +187,8 @@ class Factory:
             self.fetch_goodsIds_list = self.FetchGoodsIdsList.fetch_goodsId_list
             self.FilterGoods = FilterGoods(self.session, **self.kwargs)
             self.filter_goods = self.FilterGoods.filter_goods
+            self.GoodsKeyValue = GoodsKeyValue(self.session, **self.kwargs)
+            self.goods_key_value = self.GoodsKeyValue.goods_key_value
 
     class __Groups:
         def __init__(self, session, shop_id, **kwargs):
@@ -299,3 +304,8 @@ class Factory:
             self.seckill_add = self.SeckillAdd.add
             self.SeckillEdit = SecKillEdit(self.session, **self.kwargs)
             self.seckill_edit = self.SeckillEdit.edit
+            self.SeckillDelete = SecKillDelete(self.session, **self.kwargs)
+            self.seckill_delete = self.SeckillDelete.seckill_delete
+            self.SecKillInfos = SecKillinfos(self.session, **self.kwargs)
+            self.seckill_infos = self.SecKillInfos.infos
+            self.FetchSecKillList = FetchSecKillList(self.session, **self.kwargs)
