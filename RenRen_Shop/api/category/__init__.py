@@ -5,6 +5,7 @@
 @description : 
 @File : __init__.py.py 
 """
-from .category_list import Category
+from .category_list import CategoryList
+from .set_category import SetCategory
 
-__all__ = ['Category']
+__all__ = ['CategoryList', 'SetCategory']
