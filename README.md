@@ -1,10 +1,10 @@
 # README
 ***
-|   author    | YarnBlue |
-|:-----------:|:--------:|
-| description | 人人商城后台管理 |
-|   version   |  1.0.2   |
-|   email   |  zqb090325@126.com   |
+|   author    |     YarnBlue      |
+|:-----------:|:-----------------:|
+| description |     人人商城后台管理      |
+|   version   |       1.0.3       |
+|   email   | zqb090325@126.com |
 
 ## 说明
 该项目基于人人商城V5
@@ -26,29 +26,51 @@ pip install RenRen_Shop
 
 ## 主要结构
 <details><summary>goods：商品模块</summary>
-GoodsInfo : 商品信息<br>
-AddGoods : 增加商品<br>
-EditGoods : 编辑商品<br>
-FetchGoods : 获取商品列表
+goods_info : 商品信息<br>
+add_goods : 增加商品<br>
+edit_goods : 编辑商品<br>
+FetchGoods : 获取商品列表<br>
+fetch_goodsId_list: 筛选商品id列表<br>
+filter_goods: 全属性筛选商品<br>
+goods_key_value: 商品属性值
 </details>
 <details><summary>category：商品分类模块</summary>
-Category : 商品分类<br>
+category_list : 商品分类<br>
+set_category: 批量设置分类
 </details>
 <details><summary>group：商品分组模块</summary>
-GroupsInfo : 商品分组信息<br>
+groups_info : 商品分组信息<br>
 FetchGroups : 获取商品分组列表<br>
-AddGroup : 增加商品分组<br>
-UpdateGroup : 更新商品分组
+add_group : 增加商品分组<br>
+update_group : 更新商品分组
 </details>
 <details><summary>log：操作日志模块</summary>
-LogInfo : 账户操作日志信息<br>
+log_info : 账户操作日志信息<br>
 FetchLogList : 获取操作日志列表<br>
 </details>
 <details><summary>upload：上传模块</summary>
-ImgUploader : 上传图片<br>
+img_uploader : 上传图片<br>
 </details>
 <details><summary>photo_album：图册模块</summary>
-AddAlbum : 增加图片分组<br>
+add_album : 增加图片分组<br>
+</details>
+<details><summary>commission：分销模块</summary>
+change_agent : 更换分销上下级<br>
+FetchAgentList: 分销商列表<br>
+FetchGoodsCommissionList: 分销商品列表<br>
+cancel_goods_commission: 商品取消分销<br>
+add_goods_commission: 商品开启分销
+</details>
+<details><summary>seckill：秒杀模块</summary>
+seckill_add : 新增秒杀活动<br>
+seckill_delete: 删除秒杀活动<br>
+seckill_info: 秒杀活动信息<br>
+seckill_edit: 编辑秒杀活动<br>
+FetchSecKillList: 秒杀活动列表
+</details>
+<details><summary>diypage：页面模块</summary>
+page_edit : 页面编辑<br>
+page_info: 页面信息
 </details>
 
 ## 使用

@@ -4,26 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0320431c-2aa2-4605-926c-394be34cd999" name="Changes" comment="优化商品全属性筛选功能，增加'!='判断">
-      <change afterPath="$PROJECT_DIR$/RenRen_Shop/api/application/seckill/delete.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/RenRen_Shop/api/application/seckill/fetch_list.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/RenRen_Shop/api/category/set_category.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/RenRen_Shop/api/goods/goods_key_value.py" afterDir="false" />
+    <list default="true" id="0320431c-2aa2-4605-926c-394be34cd999" name="Changes" comment="优化">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RenRen_Shop/api/app/MySecKill.py" beforeDir="false" afterPath="$PROJECT_DIR$/RenRen_Shop/api/app/MySecKill.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RenRen_Shop/api/application/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/RenRen_Shop/api/application/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RenRen_Shop/api/application/seckill/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/RenRen_Shop/api/application/seckill/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RenRen_Shop/api/application/seckill/infos.py" beforeDir="false" afterPath="$PROJECT_DIR$/RenRen_Shop/api/application/seckill/infos.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RenRen_Shop/api/category/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/RenRen_Shop/api/category/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RenRen_Shop/api/category/category_list.py" beforeDir="false" afterPath="$PROJECT_DIR$/RenRen_Shop/api/category/category_list.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RenRen_Shop/api/goods/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/RenRen_Shop/api/goods/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RenRen_Shop/api/goods/fetch_goods_list.py" beforeDir="false" afterPath="$PROJECT_DIR$/RenRen_Shop/api/goods/fetch_goods_list.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RenRen_Shop/api/goods/filter_goods.py" beforeDir="false" afterPath="$PROJECT_DIR$/RenRen_Shop/api/goods/filter_goods.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RenRen_Shop/api/goods/template/goods_edit_template.json" beforeDir="false" afterPath="$PROJECT_DIR$/RenRen_Shop/api/goods/template/goods_edit_template.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RenRen_Shop/api/url/url.py" beforeDir="false" afterPath="$PROJECT_DIR$/RenRen_Shop/api/url/url.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RenRen_Shop/common/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/RenRen_Shop/common/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RenRen_Shop/factory/factory.py" beforeDir="false" afterPath="$PROJECT_DIR$/RenRen_Shop/factory/factory.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/setup.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -203,90 +186,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1649126057376</updated>
-    </task>
-    <task id="LOCAL-00001" summary="优化">
-      <created>1649143429046</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1649143429046</updated>
-    </task>
-    <task id="LOCAL-00002" summary="优化">
-      <created>1649145628093</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1649145628093</updated>
-    </task>
-    <task id="LOCAL-00003" summary="优化">
-      <created>1649145953326</created>
-      <option name="number" value="00003" />
-      <option name="presentableId" value="LOCAL-00003" />
-      <option name="project" value="LOCAL" />
-      <updated>1649145953326</updated>
-    </task>
-    <task id="LOCAL-00004" summary="优化">
-      <created>1649146484447</created>
-      <option name="number" value="00004" />
-      <option name="presentableId" value="LOCAL-00004" />
-      <option name="project" value="LOCAL" />
-      <updated>1649146484447</updated>
-    </task>
-    <task id="LOCAL-00005" summary="优化">
-      <created>1649146514053</created>
-      <option name="number" value="00005" />
-      <option name="presentableId" value="LOCAL-00005" />
-      <option name="project" value="LOCAL" />
-      <updated>1649146514053</updated>
-    </task>
-    <task id="LOCAL-00006" summary="优化">
-      <created>1649150243773</created>
-      <option name="number" value="00006" />
-      <option name="presentableId" value="LOCAL-00006" />
-      <option name="project" value="LOCAL" />
-      <updated>1649150243773</updated>
-    </task>
-    <task id="LOCAL-00007" summary="优化">
-      <created>1649151545286</created>
-      <option name="number" value="00007" />
-      <option name="presentableId" value="LOCAL-00007" />
-      <option name="project" value="LOCAL" />
-      <updated>1649151545286</updated>
-    </task>
-    <task id="LOCAL-00008" summary="优化">
-      <created>1649151722589</created>
-      <option name="number" value="00008" />
-      <option name="presentableId" value="LOCAL-00008" />
-      <option name="project" value="LOCAL" />
-      <updated>1649151722589</updated>
-    </task>
-    <task id="LOCAL-00009" summary="优化">
-      <created>1649152674428</created>
-      <option name="number" value="00009" />
-      <option name="presentableId" value="LOCAL-00009" />
-      <option name="project" value="LOCAL" />
-      <updated>1649152674428</updated>
-    </task>
-    <task id="LOCAL-00010" summary="优化">
-      <created>1649153728045</created>
-      <option name="number" value="00010" />
-      <option name="presentableId" value="LOCAL-00010" />
-      <option name="project" value="LOCAL" />
-      <updated>1649153728045</updated>
-    </task>
-    <task id="LOCAL-00011" summary="优化">
-      <created>1649154654740</created>
-      <option name="number" value="00011" />
-      <option name="presentableId" value="LOCAL-00011" />
-      <option name="project" value="LOCAL" />
-      <updated>1649154654740</updated>
-    </task>
-    <task id="LOCAL-00012" summary="优化">
-      <created>1649154697633</created>
-      <option name="number" value="00012" />
-      <option name="presentableId" value="LOCAL-00012" />
-      <option name="project" value="LOCAL" />
-      <updated>1649154697633</updated>
     </task>
     <task id="LOCAL-00013" summary="优化">
       <created>1649155576726</created>
@@ -519,7 +418,119 @@
       <option name="project" value="LOCAL" />
       <updated>1649490168377</updated>
     </task>
-    <option name="localTasksCounter" value="46" />
+    <task id="LOCAL-00046" summary="秒杀活动增加：列表、信息、删除功能">
+      <created>1649572265785</created>
+      <option name="number" value="00046" />
+      <option name="presentableId" value="LOCAL-00046" />
+      <option name="project" value="LOCAL" />
+      <updated>1649572265785</updated>
+    </task>
+    <task id="LOCAL-00047" summary="暴露接口">
+      <created>1649572324332</created>
+      <option name="number" value="00047" />
+      <option name="presentableId" value="LOCAL-00047" />
+      <option name="project" value="LOCAL" />
+      <updated>1649572324332</updated>
+    </task>
+    <task id="LOCAL-00048" summary="暴露接口">
+      <created>1649572347835</created>
+      <option name="number" value="00048" />
+      <option name="presentableId" value="LOCAL-00048" />
+      <option name="project" value="LOCAL" />
+      <updated>1649572347835</updated>
+    </task>
+    <task id="LOCAL-00049" summary="暴露接口">
+      <created>1649572425843</created>
+      <option name="number" value="00049" />
+      <option name="presentableId" value="LOCAL-00049" />
+      <option name="project" value="LOCAL" />
+      <updated>1649572425843</updated>
+    </task>
+    <task id="LOCAL-00050" summary="暴露接口">
+      <created>1649572430409</created>
+      <option name="number" value="00050" />
+      <option name="presentableId" value="LOCAL-00050" />
+      <option name="project" value="LOCAL" />
+      <updated>1649572430409</updated>
+    </task>
+    <task id="LOCAL-00051" summary="优化">
+      <created>1649572456882</created>
+      <option name="number" value="00051" />
+      <option name="presentableId" value="LOCAL-00051" />
+      <option name="project" value="LOCAL" />
+      <updated>1649572456882</updated>
+    </task>
+    <task id="LOCAL-00052" summary="增加功能">
+      <created>1649572480733</created>
+      <option name="number" value="00052" />
+      <option name="presentableId" value="LOCAL-00052" />
+      <option name="project" value="LOCAL" />
+      <updated>1649572480733</updated>
+    </task>
+    <task id="LOCAL-00053" summary="修复">
+      <created>1649572497680</created>
+      <option name="number" value="00053" />
+      <option name="presentableId" value="LOCAL-00053" />
+      <option name="project" value="LOCAL" />
+      <updated>1649572497680</updated>
+    </task>
+    <task id="LOCAL-00054" summary="修复">
+      <created>1649572564586</created>
+      <option name="number" value="00054" />
+      <option name="presentableId" value="LOCAL-00054" />
+      <option name="project" value="LOCAL" />
+      <updated>1649572564586</updated>
+    </task>
+    <task id="LOCAL-00055" summary="优化">
+      <created>1649572580712</created>
+      <option name="number" value="00055" />
+      <option name="presentableId" value="LOCAL-00055" />
+      <option name="project" value="LOCAL" />
+      <updated>1649572580712</updated>
+    </task>
+    <task id="LOCAL-00056" summary="goods模块增加功能 goods_key_value,检索指定参数值">
+      <created>1649572662929</created>
+      <option name="number" value="00056" />
+      <option name="presentableId" value="LOCAL-00056" />
+      <option name="project" value="LOCAL" />
+      <updated>1649572662929</updated>
+    </task>
+    <task id="LOCAL-00057" summary="优化注释">
+      <created>1649572689822</created>
+      <option name="number" value="00057" />
+      <option name="presentableId" value="LOCAL-00057" />
+      <option name="project" value="LOCAL" />
+      <updated>1649572689822</updated>
+    </task>
+    <task id="LOCAL-00058" summary="官方接口，批量分类">
+      <created>1649572711315</created>
+      <option name="number" value="00058" />
+      <option name="presentableId" value="LOCAL-00058" />
+      <option name="project" value="LOCAL" />
+      <updated>1649572711315</updated>
+    </task>
+    <task id="LOCAL-00059" summary="版本号">
+      <created>1649572726791</created>
+      <option name="number" value="00059" />
+      <option name="presentableId" value="LOCAL-00059" />
+      <option name="project" value="LOCAL" />
+      <updated>1649572726791</updated>
+    </task>
+    <task id="LOCAL-00060" summary="新增">
+      <created>1649572738377</created>
+      <option name="number" value="00060" />
+      <option name="presentableId" value="LOCAL-00060" />
+      <option name="project" value="LOCAL" />
+      <updated>1649572738377</updated>
+    </task>
+    <task id="LOCAL-00061" summary="优化">
+      <created>1649572744455</created>
+      <option name="number" value="00061" />
+      <option name="presentableId" value="LOCAL-00061" />
+      <option name="project" value="LOCAL" />
+      <updated>1649572744455</updated>
+    </task>
+    <option name="localTasksCounter" value="62" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -534,9 +545,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="优化" />
-    <MESSAGE value="商品属性支持多级嵌套字典属性修改，例如单sku价格修改" />
-    <MESSAGE value="自定义页面内容数据模板" />
     <MESSAGE value="新增商品属性快速修改和sku修改" />
     <MESSAGE value="适配各代理商" />
     <MESSAGE value="修改默认pagesize: 10-&gt;100" />
@@ -552,6 +560,16 @@
     <MESSAGE value="增加商品列表获取排序功能" />
     <MESSAGE value="增加新的判断方式：!=" />
     <MESSAGE value="优化商品全属性筛选功能，增加'!='判断" />
-    <option name="LAST_COMMIT_MESSAGE" value="优化商品全属性筛选功能，增加'!='判断" />
+    <MESSAGE value="秒杀活动增加：列表、信息、删除功能" />
+    <MESSAGE value="暴露接口" />
+    <MESSAGE value="增加功能" />
+    <MESSAGE value="修复" />
+    <MESSAGE value="goods模块增加功能 goods_key_value,检索指定参数值" />
+    <MESSAGE value="优化注释" />
+    <MESSAGE value="官方接口，批量分类" />
+    <MESSAGE value="版本号" />
+    <MESSAGE value="新增" />
+    <MESSAGE value="优化" />
+    <option name="LAST_COMMIT_MESSAGE" value="优化" />
   </component>
 </project>
