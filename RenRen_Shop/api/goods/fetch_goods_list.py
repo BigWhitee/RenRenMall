@@ -59,7 +59,7 @@ class FetchGoodsList(Fetch):
         :param kwargs: 可接受参数如下：
 
         =========================
-        status: 上下架商品，值为0或1
+        status: 上下架商品，0:全部， 1：出售中，2：售罄，3：仓库中，4：回收站
 
         keywords: 关键词搜索，接受名称，编码，条码
 
