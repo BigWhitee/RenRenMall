@@ -3,7 +3,8 @@
 |   author    | YarnBlue |
 |:-----------:|:--------:|
 | description | 人人商城后台管理 |
-|   version   |  1.0.0   |
+|   version   |  1.0.2   |
+|   email   |  zqb090325@126.com   |
 
 ## 说明
 该项目基于人人商城V5
