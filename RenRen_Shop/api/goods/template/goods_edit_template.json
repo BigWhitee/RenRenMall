@@ -131,18 +131,18 @@
      "group": "",
      "label": [
           {
-               "label_id": "-1",
-               "goods_id": "10844",
+               "label_id": "1104",
+               "goods_id": "9548",
                "shop_id": "480"
           },
           {
-               "label_id": "-2",
-               "goods_id": "10844",
+               "label_id": "1105",
+               "goods_id": "9548",
                "shop_id": "480"
           },
           {
-               "label_id": "-3",
-               "goods_id": "10844",
+               "label_id": "1106",
+               "goods_id": "9548",
                "shop_id": "480"
           }
      ],
@@ -151,9 +151,9 @@
           "3394"
      ],
      "label_id": [
-          "-1",
-          "-2",
-          "-3"
+          "1104",
+          "1105",
+          "1106"
      ],
      "commission": {
           "commission_rule": null
