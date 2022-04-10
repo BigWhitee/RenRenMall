@@ -41,6 +41,9 @@ class URL:
     def category_list(self):
         return self.host + f'/shop/api/goods/category/get-list'
 
+    def set_category(self):
+        return self.host + '/shop/api/goods/operation/set-category'
+
     def goods_info(self):
         return self.host + '/shop/api/goods/index/get'
 
@@ -98,9 +101,16 @@ class URL:
     def seckill_infos(self):
         return self.host + '/shop/api/apps/seckill/index/detail'
 
+    def seckill_delete(self):
+        return self.host + '/shop/api/apps/seckill/index/delete'
+
+    def seckill_list(self):
+        return self.host + '/shop/api/apps/seckill/index/list'
+
     def page_edit(self):
         return self.host + '/shop/api/apps/diypage/page/list/edit'
 
     def goods_helper(self):
         return self.host + '/shop/api/apps/goodsHelper'
+
 
