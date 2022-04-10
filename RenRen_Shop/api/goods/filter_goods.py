@@ -122,6 +122,8 @@ class FilterGoods(RenRenApi):
         sales: 虚拟销量
         real_sales: 真实销量
         price: 价格
+        max_price: sku最大价格
+        min_price: sku最低价格
         has_option: 是否多规格
         options: 规格，list[dict[str, any]]
         options__[num]__title: sku名称
@@ -163,8 +165,8 @@ class FilterGoods(RenRenApi):
         is_hot: 是否热卖
         is_new: 是否新品
         params: 参数，list,格式如：[{'key': '产地', 'value': '大陆'},{},...]
-        category__category_id: 分类ID, 需与category_id一同修改
-        category_id: 分类ID, 需与category__category_id一同修改
+        category__[num]__category_id: 分类ID, 优先使用, 在goodslist数据中即可取得
+        category_id: 分类ID,list 需与category__category_id一同修改
         category__sub_shop_id: 所属子店铺ID
         give_credit_status: 是否赠送积分
         give_credit_num: 赠送积分数量
