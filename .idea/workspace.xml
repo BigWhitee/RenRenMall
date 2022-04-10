@@ -4,8 +4,25 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0320431c-2aa2-4605-926c-394be34cd999" name="Changes" comment="增加新的判断方式：!=">
+    <list default="true" id="0320431c-2aa2-4605-926c-394be34cd999" name="Changes" comment="优化商品全属性筛选功能，增加'!='判断">
+      <change afterPath="$PROJECT_DIR$/RenRen_Shop/api/application/seckill/delete.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/RenRen_Shop/api/application/seckill/fetch_list.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/RenRen_Shop/api/category/set_category.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/RenRen_Shop/api/goods/goods_key_value.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RenRen_Shop/api/app/MySecKill.py" beforeDir="false" afterPath="$PROJECT_DIR$/RenRen_Shop/api/app/MySecKill.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RenRen_Shop/api/application/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/RenRen_Shop/api/application/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RenRen_Shop/api/application/seckill/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/RenRen_Shop/api/application/seckill/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RenRen_Shop/api/application/seckill/infos.py" beforeDir="false" afterPath="$PROJECT_DIR$/RenRen_Shop/api/application/seckill/infos.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RenRen_Shop/api/category/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/RenRen_Shop/api/category/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RenRen_Shop/api/category/category_list.py" beforeDir="false" afterPath="$PROJECT_DIR$/RenRen_Shop/api/category/category_list.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RenRen_Shop/api/goods/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/RenRen_Shop/api/goods/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RenRen_Shop/api/goods/fetch_goods_list.py" beforeDir="false" afterPath="$PROJECT_DIR$/RenRen_Shop/api/goods/fetch_goods_list.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RenRen_Shop/api/goods/filter_goods.py" beforeDir="false" afterPath="$PROJECT_DIR$/RenRen_Shop/api/goods/filter_goods.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RenRen_Shop/api/goods/template/goods_edit_template.json" beforeDir="false" afterPath="$PROJECT_DIR$/RenRen_Shop/api/goods/template/goods_edit_template.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RenRen_Shop/api/url/url.py" beforeDir="false" afterPath="$PROJECT_DIR$/RenRen_Shop/api/url/url.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RenRen_Shop/common/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/RenRen_Shop/common/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RenRen_Shop/factory/factory.py" beforeDir="false" afterPath="$PROJECT_DIR$/RenRen_Shop/factory/factory.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/setup.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -495,7 +512,14 @@
       <option name="project" value="LOCAL" />
       <updated>1649490114706</updated>
     </task>
-    <option name="localTasksCounter" value="45" />
+    <task id="LOCAL-00045" summary="优化商品全属性筛选功能，增加'!='判断">
+      <created>1649490168376</created>
+      <option name="number" value="00045" />
+      <option name="presentableId" value="LOCAL-00045" />
+      <option name="project" value="LOCAL" />
+      <updated>1649490168377</updated>
+    </task>
+    <option name="localTasksCounter" value="46" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -527,6 +551,7 @@
     <MESSAGE value="自生成" />
     <MESSAGE value="增加商品列表获取排序功能" />
     <MESSAGE value="增加新的判断方式：!=" />
-    <option name="LAST_COMMIT_MESSAGE" value="增加新的判断方式：!=" />
+    <MESSAGE value="优化商品全属性筛选功能，增加'!='判断" />
+    <option name="LAST_COMMIT_MESSAGE" value="优化商品全属性筛选功能，增加'!='判断" />
   </component>
 </project>
