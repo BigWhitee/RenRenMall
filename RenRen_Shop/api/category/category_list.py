@@ -8,7 +8,7 @@
 from RenRen_Shop.api.RenRen_api import RenRenApi
 
 
-class Category(RenRenApi):
+class CategoryList(RenRenApi):
     def category_list(self):
         rep = self.session.get(self.URL.category_list())
         return rep.json()
