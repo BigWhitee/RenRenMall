@@ -230,8 +230,31 @@ class MySecKill(RenRenApi):
     def add_mySecKill_with_filter_and_time(self, start_dt, **kwargs):
         """
         对指定的商品，随机组成5个秒杀活动，每个活动持续2小时，提前4小时预热，从上午8点开始
+
+        =========================
+        status: 上下架商品，值为0或1
+
+        keywords: 关键词搜索，接受名称，编码，条码
+
+        label_field: 营销标签，值为 is_hot, is_new, is_recommand
+
+        create_time[]: 时间范围，按列表传入 时间格式[2022-03-28+00:00,2022-03-28+00:00],因key包含[],以**kwargs传入
+
+        category_id[]: 分类搜索，多个分类按表格传入，单个分类可以使用参数category_id,因key包含[],以**kwargs传入
+
+        type: 类型，值为 all, 0, 1, 2, 3, 4, 5
+
+        audit_status: 审核状态
+
+        sub_shop_name: 子店铺名
+
+        page: 页数
+
+        pagesize: 每页数量大小
+
+        =========================
         :param start_dt: 格式：2022-04-07 08:00:00
-        :param kwargs:
+        :param kwargs: 商品筛选条件
         :return:
         """
         start_timdstamp = str_2_time(start_dt)
