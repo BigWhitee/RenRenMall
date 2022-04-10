@@ -5,6 +5,7 @@
 @description : 
 @File : __init__.py.py 
 """
-from .seckill import Add as SecKillAdd, Edit as SecKillEdit
+from .seckill import Add as SecKillAdd, Edit as SecKillEdit, Delete as SecKillDelete
+from .seckill import Infos as SecKillinfos, List as FetchSecKillList
 
-__all__ = ['SecKillAdd', 'SecKillEdit']
+__all__ = ['SecKillAdd', 'SecKillEdit', 'SecKillDelete', 'FetchSecKillList', 'SecKillinfos']
