@@ -13,6 +13,5 @@ from RenRen_Shop.factory import Factory
 
 if __name__ == '__main__':
     with Factory() as client:
-        goods_ids = client.goods.filter_goods('real_sales', 2, '>')
-        client.logger.info(f'筛选出的数量总数为：{len(goods_ids)}')
-        print(goods_ids)
+        if client.goods.goods_copy(goods_id=9451, title='这是一个商品复制测试'):
+            client.logger.info('Done!')

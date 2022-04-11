@@ -14,3 +14,7 @@
 [2022-04-07  17:16:26.008] "D:\python\RenRenMall\RenRen_Shop\api\application\seckill\add.py:53" [ERROR] : {"error":460100,"message":"商品[扫把套装簸箕组合家用笤帚刮水器头发扫地神器扫帚垃圾铲单个扫帚]减库存方式不是下单减库存"}
 [2022-04-07  17:16:27.883] "D:\python\RenRenMall\RenRen_Shop\api\application\seckill\add.py:53" [ERROR] : {"error":460100,"message":"商品[辣味客重庆自热小火锅麻辣牛肚火腿肠蔬菜自助方便懒人网红火锅]减库存方式不是下单减库存"}
 [2022-04-07  17:16:29.969] "D:\python\RenRenMall\RenRen_Shop\api\application\seckill\add.py:53" [ERROR] : {"error":460100,"message":"商品[老干妈油辣椒275g贵州风味特产油辣子花生辣椒酱调料拌面酱]减库存方式不是下单减库存"}
+[2022-04-11  13:24:49.625] "D:\python\RenRenMall\RenRen_Shop\api\goods\add_goods.py:88" [ERROR] : {"error":2,"message":"array_flip() expects parameter 1 to be array, string given"}
+[2022-04-11  13:27:46.391] "D:\python\RenRenMall\RenRen_Shop\api\goods\add_goods.py:89" [ERROR] : {"error":2,"message":"array_flip() expects parameter 1 to be array, string given"}
+[2022-04-11  13:31:47.376] "D:\python\RenRenMall\RenRen_Shop\api\goods\add_goods.py:88" [ERROR] : {"error":2,"message":"array_flip() expects parameter 1 to be array, string given"}
+[2022-04-11  13:35:46.559] "D:\python\RenRenMall\RenRen_Shop\api\goods\add_goods.py:88" [ERROR] : {"error":2,"message":"array_flip() expects parameter 1 to be array, string given"}

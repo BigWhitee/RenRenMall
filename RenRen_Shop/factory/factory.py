@@ -189,6 +189,8 @@ class Factory:
             self.filter_goods = self.FilterGoods.filter_goods
             self.GoodsKeyValue = GoodsKeyValue(self.session, **self.kwargs)
             self.goods_key_value = self.GoodsKeyValue.goods_key_value
+            self.GoodsCopy = GoodsCopy(self.session, **self.kwargs)
+            self.goods_copy = self.GoodsCopy.copy_goods
 
     class __Groups:
         def __init__(self, session, shop_id, **kwargs):

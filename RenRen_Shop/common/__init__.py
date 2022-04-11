@@ -10,4 +10,11 @@ from .fetch import Fetch
 from .conDB import connection_db
 from .common_fuc import *
 
-__all__ = ['log', 'Fetch', 'connection_db', 'time_2_str', 'str_2_time', 'logger']
+__all__ = ['log',
+           'Fetch',
+           'connection_db',
+           'time_2_str',
+           'str_2_time',
+           'logger',
+           'exchange_params',
+           'template']

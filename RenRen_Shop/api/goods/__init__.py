@@ -12,6 +12,14 @@ from .fetch_goods_list import FetchGoodsList
 from .fetch_goodsId_list_by_filter import FetchGoodsIdList
 from .filter_goods import FilterGoods
 from .goods_key_value import GoodsKeyValue
+from .goods_copy import GoodsCopy
 
 
-__all__ = ['AddGoods', 'GoodsInfo', 'EditGoods', 'FetchGoodsList', 'FetchGoodsIdList', 'FilterGoods', 'GoodsKeyValue']
+__all__ = ['AddGoods',
+           'GoodsInfo',
+           'EditGoods',
+           'FetchGoodsList',
+           'FetchGoodsIdList',
+           'FilterGoods',
+           'GoodsKeyValue',
+           'GoodsCopy']
