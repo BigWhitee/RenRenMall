@@ -10,6 +10,13 @@ from RenRen_Shop.api.RenRen_api import RenRenApi
 
 class AddGroup(RenRenApi):
     def add_group(self, name, status, *goods_ids):
+        """
+
+        :param name: 组名
+        :param status: 状态；1:启动 2:关闭
+        :param goods_ids:
+        :return:
+        """
         data = {
             'name': name,
             'status': status

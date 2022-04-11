@@ -12,7 +12,7 @@ import time
 
 from RenRen_Shop.api.RenRen_api import RenRenApi
 from RenRen_Shop.api.goods.add_goods import AddGoods
-from RenRen_Shop.common import exchange_params, template
+from RenRen_Shop.common import exchange_params, template, set_spec_id, set_child_spec_id
 
 
 class GoodsCopy(RenRenApi):
@@ -23,30 +23,6 @@ class GoodsCopy(RenRenApi):
         params = dict(id=goods_id, flag='copy')
         goods_infos = self.session.get(self.URL.goods_info(), params=params, **self.kwargs).json()['data']
         return goods_infos
-
-    @staticmethod
-    def spec_data(spec_raw):
-        datas = list()
-        for index, (key, value) in enumerate(spec_raw.items()):
-            time.sleep(0.1)
-            data = {
-                'id': f'spec{int(time.time() * 1000)}',
-                'title': key,
-                'image_checked': 0
-            }
-            items = list()
-            for i, each in enumerate(value):
-                items_data = {
-                    'id': f'childSpec{int(time.time() * 1000) + index + 1}',
-                    'title': each,
-                    '_sortId': f'{int(time.time() * 1000) + index + 1}_{random.random()}',
-                    'specId': data['id'],
-                    'display_order': i
-                }
-                items.append(items_data)
-            data['items'] = items
-            datas.append(data)
-        return datas
 
     def copy_goods(self, goods_id, **kwargs):
         """
@@ -112,20 +88,16 @@ class GoodsCopy(RenRenApi):
         give_credit_status: 是否赠送积分
         give_credit_num: 赠送积分数量
         is_commission: 是否分销
-        browse_level_perm: 会员查看权限
-        browse_tag_perm: 标签组查看权限
-        buy_level_perm: 会员购买权限
-        buy_tag_perm: 标签组购买权限
         form_status: 是否插入表单
         form_id: 表单ID
         subShopCategory: 子店铺商品分类
         group: 商品组id
         label: 商品标签，list,需与label_id一同修改
         label_id: 商品标签,需与label一同修改
-        perm_data__browse__member_level: 浏览权限会员等级id, list
-        perm_data__browse__member_tag: 浏览权限会员标签id, list
-        perm_data__buy__member_level: 购买权限会员等级id, list
-        perm_data__buy__member_tag: 购买权限会员标签id, list
+        browse_level_perm_ids: 浏览权限会员等级id, list
+        browse_tag_perm_ids: 浏览权限会员标签id, list
+        buy_level_perm_ids: 购买权限会员等级id, list
+        buy_tag_perm_ids: 购买权限会员标签id, list
         browse_level_perm: "0",是否开启会员等级浏览权限
         browse_tag_perm: "0",是否开启会员标签组浏览权限
         buy_level_perm: "0",是否开启会员等级购买权限
@@ -137,25 +109,51 @@ class GoodsCopy(RenRenApi):
         :return:
         """
         goods_infos = self.good_info_copy(goods_id)
-        goods_infos = exchange_params(goods_infos, **kwargs)
+        perm_data = goods_infos.pop('perm_data')
+        goods_infos['browse_tag_perm_ids'] = perm_data['browse']['member_tag'] if perm_data['browse'][
+            'member_tag'] else ''
+        goods_infos['browse_level_perm_ids'] = perm_data['browse']['member_level'] if perm_data['browse'][
+            'member_level'] else ''
+        goods_infos['buy_tag_perm_ids'] = perm_data['buy']['member_tag'] if perm_data['buy'][
+            'member_tag'] else ''
+        goods_infos['buy_level_perm_ids'] = perm_data['buy']['member_level'] if perm_data['buy'][
+            'member_level'] else ''
         goods_infos.pop('id')
-        spec_raw = goods_infos.pop('spec')
-        title_data = dict()
-        for index, each in enumerate(spec_raw):
-            key = each['title']
-            values = list()
-            items = each['items']
-            for item in items:
-                values.append(item['title'])
-            title_data[key] = values
-        spec = self.spec_data(title_data)
-        try:
+        goods_infos = exchange_params(goods_infos, **kwargs)
+        if int(goods_infos['has_option']):
+            spec = goods_infos.pop('spec')
             options = goods_infos.pop('options')
-            for option in options:
+            ids = list()  # 用于存储规格属性id
+            for each in spec:  # 对spec数据中的规格及规格项生成新的id,并进行替换
+                title = each['title']
+                id = each['id']
+                res = set_spec_id(title, id)
+                ids.append(res)
+                each['id'] = res['id']
+                for item in each['items']:
+                    item_id = item['id']
+                    item_title = item['title']
+                    item_res = set_child_spec_id(item_title, item_id, id)
+                    item['id'] = item_res['id']
+                    item['spec_id'] = res['id']
+                    ids.append(item_res)
+                    time.sleep(0.01)
+            for index, option in enumerate(options):
+                option.pop('id')
+                option.pop('shop_id')
+                option.pop('sub_shop_id')
+                option.pop('goods_id')
+                option['tmpid'] = f'_tmpID_{index}'
                 option['specs'] = option['specs'].split(',')
-                option['tmpid'] = option['id']
-        except:
-            options = []
+                for i, each_spec in enumerate(option['specs']):
+                    for every in ids:
+                        if every['type'] == 'childSpec':
+                            if each_spec == every['raw_id']:
+                                option['specs'][i] = every['id']
+                                break
+        else:
+            spec = None
+            options = None
         goods_commission = template('goods_commission', os.path.dirname(__file__))
         member_level_discount = dict() if 'member_level_discount' not in goods_infos.keys() \
             else goods_infos.pop('member_level_discount')

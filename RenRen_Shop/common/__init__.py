@@ -17,4 +17,6 @@ __all__ = ['log',
            'str_2_time',
            'logger',
            'exchange_params',
-           'template']
+           'template',
+           'set_spec_id',
+           'set_child_spec_id']

@@ -7,6 +7,7 @@
 """
 import json
 import os
+import time
 
 import numpy as np
 
@@ -15,12 +16,38 @@ from RenRen_Shop.common import logger
 
 
 class AddGoods(RenRenApi):
-    @ staticmethod
+    @staticmethod
     def template(type):
         filepath = os.path.dirname(__file__)
         with open(os.path.join(filepath, f'template/{type}_template.json'), 'rb') as f:
             data = json.load(f)
         return data
+
+    @staticmethod
+    def spec_id(title):
+        """
+        生成规格属性id，如颜色
+
+        :return:
+        """
+        return {
+            'type': 'spec',
+            'title': title,
+            'id': f'spec{int(time.time()*1000)}'
+        }
+
+    @staticmethod
+    def child_spec_id(title):
+        """
+        生成规格项id，如红色
+
+        :return:
+        """
+        return {
+            'type': 'childSpec',
+            'title': title,
+            'id': f'childSpec{int(time.time()*1000)}'
+        }
 
     @staticmethod
     def spec_data(raw):
@@ -76,8 +103,8 @@ class AddGoods(RenRenApi):
                   ) -> bool:
         data = {
             'goods': json.dumps(goods),
-            'spec': json.dumps(spec),
-            'options': json.dumps(options),
+            'spec': json.dumps(spec) if spec else None,
+            'options': json.dumps(options) if options else None,
             'goods_commission': json.dumps(goods_commission),
             'member_level_discount': json.dumps(member_level_discount)
         }

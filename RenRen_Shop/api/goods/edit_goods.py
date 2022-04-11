@@ -28,24 +28,28 @@ class EditGoods(RenRenApi):
         :return:
         """
         goods_commission = AddGoods.template('goods_commission')
-        try:
-            options = infos.pop('options')
-            for option in options:
-                option['specs'] = option['specs'].split(',')
-                option['tmpid'] = option['id']
-        except Exception as e:
-            logger.error(f'options错误，{e}')
-            options = []
-        try:
-            spec = infos.pop('spec')
-            for each in spec:
-                items = each['items']
-                for item in items:
-                    item['specId'] = item['spec_id']
-                    item['_sortId'] = f'{int(time.time()*1000)}_{random.random()}'
-        except Exception as e:
-            logger.error(f'spec错误，{e}')
-            spec = []
+        if int(infos['has_option']):
+            try:
+                options = infos.pop('options')
+                for option in options:
+                    option['specs'] = option['specs'].split(',')
+                    option['tmpid'] = option['id']
+            except Exception as e:
+                logger.error(f'options错误，{e}')
+                options = None
+            try:
+                spec = infos.pop('spec')
+                for each in spec:
+                    items = each['items']
+                    for item in items:
+                        item['specId'] = item['spec_id']
+                        item['_sortId'] = f'{int(time.time()*1000)}_{random.random()}'
+            except Exception as e:
+                logger.error(f'spec错误，{e}')
+                spec = None
+        else:
+            options = None
+            spec = None
         data = {
             'options': options,
             'spec': spec,

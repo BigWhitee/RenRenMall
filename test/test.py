@@ -7,11 +7,15 @@
 """
 import json
 import random
+import time
 
 from RenRen_Shop.factory import Factory
 
 
 if __name__ == '__main__':
     with Factory() as client:
-        if client.goods.goods_copy(goods_id=9451, title='这是一个商品复制测试'):
-            client.logger.info('Done!')
+        data = {
+            'status': 1,
+        }
+        goods_ids = client.goods.fetch_goodsIds_list(**data)
+        print(len(goods_ids))

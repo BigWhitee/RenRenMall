@@ -173,12 +173,6 @@ class GoodsToCsv:
                 title = title + list(sku[i].values())[0] + '+'
                 specs.append(list(sku[i].keys())[0])
             title = title.strip('+')
-            # if len(sku) > 1:
-            #     title = f'{list(sku[0].values())[0]}+{list(sku[1].values())[0]}'
-            #     specs = [list(sku[0].keys())[0], list(sku[1].keys())[0]]
-            # else:
-            #     title = list(sku[0].values())[0]
-            #     specs = [list(sku[0].keys())[0]]
 
             option_infos = self.fetch_options_infos(title)
             data = {

@@ -60,3 +60,56 @@ def exchange_params(data, split='__', **kwargs):
         else:
             logger.error('参数级数超过3')
     return data
+
+
+def set_spec_id(title, raw_id=None):
+    """
+    生成规格属性id，如颜色;
+    返回格式如下：
+    =================
+    {
+        'type': 'spec',
+        'title': title,
+        'id': f'spec{int(time.time()*1000)}',
+        'raw_id': raw_id
+    }
+    =================
+
+    :param title: 规格名称，如颜色
+    :param raw_id: 原spec_id
+    :return:
+    """
+    return {
+        'type': 'spec',
+        'title': title,
+        'id': f'spec{int(time.time()*1000)}',
+        'raw_id': raw_id
+    }
+
+
+def set_child_spec_id(title, raw_id=None, raw_spec_id=None):
+    """
+    生成规格项id，如红色
+    返回格式如下：
+    ================
+    {
+        'type': 'childSpec',
+        'title': title,
+        'id': f'childSpec{int(time.time()*1000)}',
+        'raw_id': raw_id,
+        'raw_spec_id': raw_spec_id
+    }
+    ================
+
+    :param title: 规格项名称，如红色
+    :param raw_spec_id: 所属规格原spec_id
+    :param raw_id: 原childSpec_id
+    :return:
+    """
+    return {
+        'type': 'childSpec',
+        'title': title,
+        'id': f'childSpec{int(time.time()*1000)}',
+        'raw_id': raw_id,
+        'raw_spec_id': raw_spec_id
+    }
