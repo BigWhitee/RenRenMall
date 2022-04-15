@@ -4,14 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0320431c-2aa2-4605-926c-394be34cd999" name="Changes" comment="版本更新">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RenRen_Shop/MyLog/log.log" beforeDir="false" afterPath="$PROJECT_DIR$/RenRen_Shop/MyLog/log.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RenRen_Shop/api/application/diypage/page_content.py" beforeDir="false" afterPath="$PROJECT_DIR$/RenRen_Shop/api/application/diypage/page_content.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RenRen_Shop/api/goods/edit_goods.py" beforeDir="false" afterPath="$PROJECT_DIR$/RenRen_Shop/api/goods/edit_goods.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RenRen_Shop/api/goods/filter_goods.py" beforeDir="false" afterPath="$PROJECT_DIR$/RenRen_Shop/api/goods/filter_goods.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RenRen_Shop/factory/factory.py" beforeDir="false" afterPath="$PROJECT_DIR$/RenRen_Shop/factory/factory.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/test.py" beforeDir="false" afterPath="$PROJECT_DIR$/test/test.py" afterDir="false" />
+    <list default="true" id="0320431c-2aa2-4605-926c-394be34cd999" name="Changes" comment="优化">
+      <change beforePath="$PROJECT_DIR$/setup.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -191,55 +185,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1649126057376</updated>
-    </task>
-    <task id="LOCAL-00037" summary="增加延迟，对抗服务器防火墙">
-      <created>1649483024646</created>
-      <option name="number" value="00037" />
-      <option name="presentableId" value="LOCAL-00037" />
-      <option name="project" value="LOCAL" />
-      <updated>1649483024646</updated>
-    </task>
-    <task id="LOCAL-00038" summary="测试文件">
-      <created>1649483032688</created>
-      <option name="number" value="00038" />
-      <option name="presentableId" value="LOCAL-00038" />
-      <option name="project" value="LOCAL" />
-      <updated>1649483032688</updated>
-    </task>
-    <task id="LOCAL-00039" summary="增加url访问接口">
-      <created>1649483048474</created>
-      <option name="number" value="00039" />
-      <option name="presentableId" value="LOCAL-00039" />
-      <option name="project" value="LOCAL" />
-      <updated>1649483048474</updated>
-    </task>
-    <task id="LOCAL-00040" summary="工作空间">
-      <created>1649483084582</created>
-      <option name="number" value="00040" />
-      <option name="presentableId" value="LOCAL-00040" />
-      <option name="project" value="LOCAL" />
-      <updated>1649483084582</updated>
-    </task>
-    <task id="LOCAL-00041" summary="暴露goods功能接口">
-      <created>1649483112763</created>
-      <option name="number" value="00041" />
-      <option name="presentableId" value="LOCAL-00041" />
-      <option name="project" value="LOCAL" />
-      <updated>1649483112763</updated>
-    </task>
-    <task id="LOCAL-00042" summary="自生成">
-      <created>1649483185833</created>
-      <option name="number" value="00042" />
-      <option name="presentableId" value="LOCAL-00042" />
-      <option name="project" value="LOCAL" />
-      <updated>1649483185833</updated>
-    </task>
-    <task id="LOCAL-00043" summary="增加商品列表获取排序功能">
-      <created>1649484301220</created>
-      <option name="number" value="00043" />
-      <option name="presentableId" value="LOCAL-00043" />
-      <option name="project" value="LOCAL" />
-      <updated>1649484301220</updated>
     </task>
     <task id="LOCAL-00044" summary="增加新的判断方式：!=">
       <created>1649490114706</created>
@@ -535,7 +480,56 @@
       <option name="project" value="LOCAL" />
       <updated>1649985139941</updated>
     </task>
-    <option name="localTasksCounter" value="86" />
+    <task id="LOCAL-00086" summary="增加商品添加分类功能">
+      <created>1650012832079</created>
+      <option name="number" value="00086" />
+      <option name="presentableId" value="LOCAL-00086" />
+      <option name="project" value="LOCAL" />
+      <updated>1650012832080</updated>
+    </task>
+    <task id="LOCAL-00087" summary="增加新功能">
+      <created>1650012847545</created>
+      <option name="number" value="00087" />
+      <option name="presentableId" value="LOCAL-00087" />
+      <option name="project" value="LOCAL" />
+      <updated>1650012847545</updated>
+    </task>
+    <task id="LOCAL-00088" summary="优化">
+      <created>1650012859847</created>
+      <option name="number" value="00088" />
+      <option name="presentableId" value="LOCAL-00088" />
+      <option name="project" value="LOCAL" />
+      <updated>1650012859847</updated>
+    </task>
+    <task id="LOCAL-00089" summary="增加公用方法">
+      <created>1650012900353</created>
+      <option name="number" value="00089" />
+      <option name="presentableId" value="LOCAL-00089" />
+      <option name="project" value="LOCAL" />
+      <updated>1650012900353</updated>
+    </task>
+    <task id="LOCAL-00090" summary="测试文件">
+      <created>1650012907357</created>
+      <option name="number" value="00090" />
+      <option name="presentableId" value="LOCAL-00090" />
+      <option name="project" value="LOCAL" />
+      <updated>1650012907357</updated>
+    </task>
+    <task id="LOCAL-00091" summary="优化">
+      <created>1650012972864</created>
+      <option name="number" value="00091" />
+      <option name="presentableId" value="LOCAL-00091" />
+      <option name="project" value="LOCAL" />
+      <updated>1650012972864</updated>
+    </task>
+    <task id="LOCAL-00092" summary="优化">
+      <created>1650012976351</created>
+      <option name="number" value="00092" />
+      <option name="presentableId" value="LOCAL-00092" />
+      <option name="project" value="LOCAL" />
+      <updated>1650012976351</updated>
+    </task>
+    <option name="localTasksCounter" value="93" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -550,10 +544,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="修复" />
-    <MESSAGE value="goods模块增加功能 goods_key_value,检索指定参数值" />
-    <MESSAGE value="官方接口，批量分类" />
-    <MESSAGE value="版本号" />
     <MESSAGE value="新增" />
     <MESSAGE value="文档更新" />
     <MESSAGE value="增加商品一键复制功能，支持属性修改" />
@@ -573,9 +563,13 @@
     <MESSAGE value="更新商品组代码bug修复" />
     <MESSAGE value="增加url" />
     <MESSAGE value="秒杀活动快速添加功能" />
-    <MESSAGE value="优化" />
     <MESSAGE value="版本更新" />
-    <option name="LAST_COMMIT_MESSAGE" value="版本更新" />
+    <MESSAGE value="增加商品添加分类功能" />
+    <MESSAGE value="增加新功能" />
+    <MESSAGE value="增加公用方法" />
+    <MESSAGE value="测试文件" />
+    <MESSAGE value="优化" />
+    <option name="LAST_COMMIT_MESSAGE" value="优化" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
