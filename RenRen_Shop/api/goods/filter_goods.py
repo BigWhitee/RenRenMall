@@ -204,7 +204,7 @@ class FilterGoods(RenRenApi):
         get_info = GoodsInfo(self.session, **self.kwargs)
         while fetcher.next():
             for result in fetcher.result():
-                if key.split(split)[0] not in result:
+                if key.split(split)[0] not in result.keys():
                     goods_info = get_info.goods_info(result['id'])['data']
                     if self.__filter_params__(goods_info, key, value, judge, split):
                         goods_ids.append(result['id'])
