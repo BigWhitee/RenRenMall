@@ -178,7 +178,7 @@ class FilterGoods(RenRenApi):
         form_status: 是否插入表单
         form_id: 表单ID
         subShopCategory: 子店铺商品分类
-        group: 商品组id
+        group: 商品组id,list
         label: 商品标签，list,需与label_id一同修改
         label_id: 商品标签,需与label一同修改
         perm_data__browse__member_level: 浏览权限会员等级id, list
