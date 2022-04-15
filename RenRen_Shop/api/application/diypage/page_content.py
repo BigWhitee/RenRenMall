@@ -6,6 +6,7 @@
 @File : page_content.py 
 """
 import copy
+import json
 import time
 
 from RenRen_Shop.api.RenRen_api import RenRenApi
@@ -19,6 +20,47 @@ logger = log().log()
 
 
 class PageContent(RenRenApi):
+    @staticmethod
+    def edit_page_content_part(pageinfo: dict, index: int, content: dict):
+        """
+
+        :param pageinfo: 页面信息
+        :param index: 组件序号
+        :param content: 组件修改后的内容
+        :return:
+        """
+        pagecontent_str = pageinfo['content']
+        pagecontent = json.loads(pagecontent_str)
+        pagecontent[index] = content
+        pagecontent_str = json.dumps(pagecontent)
+        pageinfo['content'] = pagecontent_str
+        return pageinfo
+
+    @staticmethod
+    def fetch_content(page_content: list[dict], type_id):
+        """
+        从页面内容中，返回指定类型组件列表及index信息
+        :param page_content:
+        :param type_id: 组建类型，可取值如下：
+        ========================
+        fixedsearch: 固定搜索框
+        blank: 辅助空白
+        banner: 图片轮播
+        menu: 菜单栏
+        title: 标题栏
+        goods: 商品组
+        seckill: 秒杀
+        picture: 单图组
+        diymenu: 自定义菜单
+        ========================
+        :return:
+        """
+        data = []
+        for index, each_content in enumerate(page_content):
+            if each_content['id'] == type_id:
+                data.append([index, each_content])
+        return data
+
     def secKill_edit(self, raw_content: dict, **kwargs):
         """
         秒杀组件内容组成部分
@@ -259,27 +301,31 @@ class PageContent(RenRenApi):
         datas = exchange_params(raw_content, **kwargs)
         return datas
 
-    @staticmethod
-    def fetch_content(page_content: list[dict], type_id):
+    def title_edit(self, raw_content: dict, **kwargs):
         """
-        从页面内容中，返回指定类型组件列表及index信息
-        :param page_content:
-        :param type_id: 组建类型，可取值如下：
-        ========================
-        fixedsearch: 固定搜索框
-        blank: 辅助空白
-        banner: 图片轮播
-        menu: 菜单栏
-        title: 标题栏
-        goods: 商品组
-        seckill: 秒杀
-        picture: 单图组
-        diymenu: 自定义菜单
-        ========================
+        标题组件内容修改
+        属性如下：
+        ===============================
+        params: 组件属性
+        params__title: 标题
+        params__icon: 图标
+        params__subTitle: 查看更多
+        params__linkurl: 跳转链接
+        params__linkurl_name: 跳转链接名称
+        params__secondTitle: 副标题
+        params__righticon: 更多图标
+        params__wxappid: 小程序appid
+        params__titleweight: 文字大小
+        params__showmore: 是否显示更多
+        params__showTitle: 是否显示副标题
+        style: 组件样式
+
+        ===============================
+
+        :param raw_content:
+        :param kwargs:
         :return:
         """
-        data = []
-        for index, each_content in enumerate(page_content):
-            if each_content['id'] == type_id:
-                data.append([index, each_content])
-        return data
+        datas = exchange_params(raw_content, **kwargs)
+        return datas
+
