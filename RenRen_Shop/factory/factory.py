@@ -23,7 +23,7 @@ from RenRen_Shop.common import *
 from RenRen_Shop.api.member import *
 from RenRen_Shop.api.commission import *
 from RenRen_Shop.api.application import *
-
+from RenRen_Shop.configs.configs import DELAY
 
 Myshop = TypeVar('Myshop', int, str)
 
@@ -132,6 +132,7 @@ class Factory:
         if isinstance(myshop, str):
             self.shop_name = myshop
             self.shop_id = self.shop_ids[self.shop_names.index(myshop)]
+        self.DELAY = DELAY
         self.headers['shop-id'] = str(self.shop_id)
         self.common = self.__Common()
         self.category = self.__Category(self.session, **self.kwargs)
