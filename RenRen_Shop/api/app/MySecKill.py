@@ -14,6 +14,7 @@
 """
 import json
 import random
+import re
 import time
 
 from RenRen_Shop.api.RenRen_api import RenRenApi
@@ -175,15 +176,15 @@ class MySecKill(RenRenApi):
             return False
 
     def add_my_seckill_with_filter(self,
-                       start_time,
-                       title,
-                       stock_radio=1,
-                       price_radio=0.9,
-                       preheat=4.0,
-                       duration=2.0,
-                       is_random=False,
-                       random_radio=1.0,
-                       **kwargs):
+                                   start_time,
+                                   title,
+                                   stock_radio=1,
+                                   price_radio=0.9,
+                                   preheat=4.0,
+                                   duration=2.0,
+                                   is_random=False,
+                                   random_radio=1.0,
+                                   **kwargs):
         """
         根据筛选条件，自动将商品生成秒杀活动
 
@@ -257,6 +258,7 @@ class MySecKill(RenRenApi):
         :param kwargs: 商品筛选条件
         :return:
         """
+        hour = int(re.findall('(\d+):\d+:\d+', start_dt)[0])
         start_timdstamp = str_2_time(start_dt)
         goods_ids = FetchGoodsIdList(self.session, **self.kwargs).fetch_goodsId_list(**kwargs)
         count = len(goods_ids)
@@ -264,10 +266,10 @@ class MySecKill(RenRenApi):
         for i in range(5):
             goods = []
             if i != 4:
-                for j in range(int(count * 0.2)):
+                for j in range(int(round(count * 0.2))):
                     goods.append(goods_ids.pop())
             else:
                 goods = goods_ids
 
             start_time = time_2_str(start_timdstamp + 3600 * i * 3)
-            self.add_my_seckill(start_time, f'{8 + i * 3}点整点秒杀', 1, 0.9, 24, 2, *goods)
+            self.add_my_seckill(start_time, f'{hour + i * 3}点整点秒杀', 1, 0.9, 24, 2, *goods)
