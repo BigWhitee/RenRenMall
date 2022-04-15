@@ -5,3 +5,6 @@
 @description : 
 @File : __init__.py.py 
 """
+from .goods_helper import GoodsHelper
+
+__all__ = ['GoodsHelper']

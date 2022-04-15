@@ -27,3 +27,8 @@
 [2022-04-11  14:16:32.156] "D:\python\RenRenMall\RenRen_Shop\api\goods\add_goods.py:88" [ERROR] : {"error":200407,"message":"缺少规格商品"}
 [2022-04-11  14:16:57.567] "D:\python\RenRenMall\RenRen_Shop\api\goods\add_goods.py:88" [ERROR] : {"error":200407,"message":"缺少规格商品"}
 [2022-04-11  14:18:01.326] "D:\python\RenRenMall\RenRen_Shop\api\goods\add_goods.py:88" [ERROR] : {"error":200407,"message":"缺少规格商品"}
+[2022-04-12  19:28:46.631] "D:\python\RenRenMall\RenRen_Shop\api\application\diypage\page_edit.py:44" [ERROR] : {"error":-1,"message":"数据不存在"}
+[2022-04-12  19:30:37.141] "D:\python\RenRenMall\RenRen_Shop\api\application\diypage\page_edit.py:42" [ERROR] : {"error":-1,"message":"数据不存在"}
+[2022-04-12  19:31:00.386] "D:\python\RenRenMall\RenRen_Shop\api\application\diypage\page_edit.py:42" [ERROR] : {"error":-1,"message":"数据不存在"}
+[2022-04-13  15:51:49.073] "D:\python\RenRenMall\RenRen_Shop\api\application\diypage\page_infos.py:42" [ERROR] : {"error":-1,"message":"记录不存在"}
+[2022-04-14  20:58:20.938] "D:\python\RenRenMall\RenRen_Shop\api\application\seckill\add.py:138" [ERROR] : {"error":460100,"message":"商品[免打孔硅胶门吸卫生间门后防撞门吸盘静音缓冲防撞垫门顶吸墙器]减库存方式不是下单减库存"}

@@ -7,5 +7,17 @@
 """
 from .seckill import Add as SecKillAdd, Edit as SecKillEdit, Delete as SecKillDelete
 from .seckill import Infos as SecKillinfos, List as FetchSecKillList
+from .diypage import *
+from .goods_helper import *
 
-__all__ = ['SecKillAdd', 'SecKillEdit', 'SecKillDelete', 'FetchSecKillList', 'SecKillinfos']
+__all__ = ['SecKillAdd',
+           'SecKillEdit',
+           'SecKillDelete',
+           'FetchSecKillList',
+           'SecKillinfos',
+           'PageEdit',
+           'PageInfos',
+           'PageContent',
+           'GoodsHelper',
+           'PageAdd'
+           ]
