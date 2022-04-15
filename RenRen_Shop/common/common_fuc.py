@@ -32,13 +32,13 @@ def template(Type, filePath) -> json:
     return data
 
 
-def exchange_params(data, split='__', **kwargs):
+def exchange_params(raw: dict, split='__', **kwargs):
     """
     对dict进行传入的key-value更新，支持多级嵌套修改，默认以__标识上下级关系，可使用__[num]__对下级为list的情况进行修改
     例如 ：“key1__2__key2 == value”
     表示：将原数据 key1 值中的第二个元素的key2 重新赋值为value
 
-    :param data:
+    :param raw:
     :param split:
     :param kwargs:
     :return:
@@ -52,14 +52,14 @@ def exchange_params(data, split='__', **kwargs):
                 key_split[i] = int(each)
         level_count = len(key_split)
         if level_count == 1:
-            data[key_split[0]] = value
+            raw[key_split[0]] = value
         elif level_count == 2:
-            data[key_split[0]][key_split[1]] = value
+            raw[key_split[0]][key_split[1]] = value
         elif level_count == 3:
-            data[key_split[0]][key_split[1]][key_split[2]] = value
+            raw[key_split[0]][key_split[1]][key_split[2]] = value
         else:
             logger.error('参数级数超过3')
-    return data
+    return raw
 
 
 def set_spec_id(title, raw_id=None):
