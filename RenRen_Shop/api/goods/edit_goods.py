@@ -8,7 +8,9 @@
 import json
 import random
 import time
+import warnings
 
+from deprecated.sphinx import deprecated
 
 from RenRen_Shop.api.RenRen_api import RenRenApi
 from RenRen_Shop.api.goods.add_goods import AddGoods
@@ -137,8 +139,8 @@ class EditGoods(RenRenApi):
         is_hot: 是否热卖
         is_new: 是否新品
         params: 参数，list,格式如：[{'key': '产地', 'value': '大陆'},{},...]
-        category__category_id: 分类ID, 需与category_id一同修改
-        category_id: 分类ID, 需与category__category_id一同修改
+        category__[num]__category_id: 分类ID, 需与category_id一同修改
+        category_id: 分类ID, list, 需与category__category_id一同修改
         category__sub_shop_id: 所属子店铺ID
         give_credit_status: 是否赠送积分
         give_credit_num: 赠送积分数量
@@ -224,4 +226,40 @@ class EditGoods(RenRenApi):
         rep = self.session.post(self.URL.edit_goods_sku(), data=kwargs, **self.kwargs)
         return True if rep.json()['error'] == 0 else False
 
+    @deprecated(version='1.0.5', reason='You shoul use edit_goods_quick instead of this! This function will be removed soon.')
+    def goods_add_category(self, goods_id, *category_ids):
+        """
+        为商品增加分类
+
+        :param goods_id:
+        :param category_ids:
+        :return:
+        """
+        warnings.warn('You shoul use edit_goods_quick instead of this! This function will be removed soon.',
+                      DeprecationWarning)
+        pass
+
+    def goods_del_category(self, goods_id, *category_ids):
+        """
+        为商品取消商品分类
+
+        :param goods_id:
+        :param category_ids:
+        :return:
+        """
+        goods_info = GoodsInfo(self.session, **self.kwargs).goods_info(goods_id)['data']
+        category_ids_raw: list = goods_info['category_id']
+        categry_raw: list = goods_info['category']
+        for category_id in category_ids:
+            try:
+                category_ids_raw.remove(str(category_id))
+            except:
+                continue
+        for each in categry_raw:
+            if each['category_id'] in category_ids:
+                categry_raw.remove(each)
+        if self.edit_goods(goods_id, category=categry_raw, category_id=category_ids_raw):
+            return True
+        else:
+            return False
 
