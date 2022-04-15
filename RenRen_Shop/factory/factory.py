@@ -144,11 +144,14 @@ class Factory:
         self.member = self.__Member(self.session, **self.kwargs)
         self.commission = self.__Commission(self.session, **self.kwargs)
         self.seckill = self.__Seckill(self.session, **self.kwargs)
+        self.diypage = self.__Diypage(self.session, **self.kwargs)
+        self.goods_helper = self.__GoodsHelper(self.session, **self.kwargs)
 
     class __Common:
         def __init__(self):
             self.Time2Str = time_2_str
             self.Str2Time = str_2_time
+            self.ConDb = connection_db
 
     class __Category:
         def __init__(self, session, **kwargs):
@@ -304,6 +307,7 @@ class Factory:
             self.kwargs = kwargs
             self.SeckillAdd = SecKillAdd(self.session, **self.kwargs)
             self.seckill_add = self.SeckillAdd.add
+            self.seckill_add_quick = self.SeckillAdd.add_quick
             self.SeckillEdit = SecKillEdit(self.session, **self.kwargs)
             self.seckill_edit = self.SeckillEdit.edit
             self.SeckillDelete = SecKillDelete(self.session, **self.kwargs)
@@ -311,3 +315,28 @@ class Factory:
             self.SecKillInfos = SecKillinfos(self.session, **self.kwargs)
             self.seckill_infos = self.SecKillInfos.infos
             self.FetchSecKillList = FetchSecKillList(self.session, **self.kwargs)
+
+    class __Diypage:
+        def __init__(self, session, **kwargs):
+            """
+            自定义页面模块
+
+            :param session:
+            :param kwargs:
+            """
+            self.session = session
+            self.kwargs = kwargs
+            self.PageInfo = PageInfos(self.session, **self.kwargs)
+            self.page_info = self.PageInfo.page_infos
+            self.PageEdit = PageEdit(self.session, **self.kwargs)
+            self.page_eidt = self.PageEdit.page_edit
+            self.PageContent = PageContent(self.session, **self.kwargs)
+            self.PageAdd = PageAdd(self.session, **self.kwargs)
+            self.page_add = self.PageAdd.page_add
+
+    class __GoodsHelper:
+        def __init__(self, session, **kwargs):
+            self.session = session
+            self.kwargs = kwargs
+            self.GoodsHelper = GoodsHelper(self.session, **self.kwargs)
+            self.goods_helper = self.GoodsHelper.goods_helper
