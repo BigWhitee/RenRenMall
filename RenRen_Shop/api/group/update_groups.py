@@ -15,22 +15,33 @@ class UpdateGroups(RenRenApi):
         super().__init__(session, **kwargs)
         self.shop_id = shop_id
 
-    def update_groups(self, id=None, name=None, *goods_ids, **kwargs):
+    def update_groups(self, id_or_name, *goods_ids, **kwargs):
         """
         更新商品组信息
 
+        支持修改的属性如下：
+        'id': id,
+        'shop_id': 480,
+        'status': 1, 是否启用
+        'name': name, 商品组名称
+        'desc': '', 商品组描述
+        'sort_type': 0,
+
+        :param id_or_name:
         :param id: 商品组id
         :param goods_ids: 内含商品id列表
-        :param kwargs: 根据需求传入对应属性值
+        :param kwargs: 根据需求传入对应属性值，进行修改
         :return:
         """
-        if id:
+        if isinstance(id_or_name, int) or id_or_name.isdigit():
             groupsInfo = GroupsInfo(self.session, **self.kwargs)
-            name = groupsInfo.groups_info(id)['data']['name']
-        if name:
+            id = id_or_name
+            name = groupsInfo.groups_info(id_or_name)['data']['name']
+        else:
             groupsList = FetchGroupsList(self.session, **self.kwargs)
-            groupsList.next(name=name)
+            groupsList.next(name=id_or_name)
             id = groupsList.result()[0]['id']
+            name = id_or_name
         data = {
             'id': id,
             'shop_id': 480,
