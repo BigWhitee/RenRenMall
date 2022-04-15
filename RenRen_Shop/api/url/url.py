@@ -110,6 +110,9 @@ class URL:
     def page_edit(self):
         return self.host + '/shop/api/apps/diypage/page/list/edit'
 
+    def page_add(self):
+        return self.host + '/shop/api/apps/diypage/page/list/add'
+
     def goods_helper(self):
         return self.host + '/shop/api/apps/goodsHelper'
 
