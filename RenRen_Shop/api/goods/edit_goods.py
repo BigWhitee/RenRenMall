@@ -218,6 +218,8 @@ class EditGoods(RenRenApi):
         options[1][price]: 第二个sku的价格
         options[1][stock]: 第二个sku的库存
         ......
+
+        若是单规格，则参数为：goods_id; stock; price
         (其余依次类推，需全部囊括)
         ===============================
 

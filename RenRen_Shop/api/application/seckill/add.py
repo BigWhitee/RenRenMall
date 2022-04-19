@@ -13,6 +13,7 @@ from RenRen_Shop.api.goods.goods_info import GoodsInfo
 from RenRen_Shop.common import time_2_str, str_2_time
 from RenRen_Shop.common.log import log
 from RenRen_Shop.configs.configs import DELAY
+from RenRen_Shop.common.price_interface import PriceInterface
 
 logger = log().log()
 
@@ -59,7 +60,7 @@ class Add(RenRenApi):
             logger.error(rep.text)
             return False
 
-    def add_quick(self, *goods_ids, **kwargs):
+    def add_quick(self, interface: PriceInterface, *goods_ids, **kwargs):
         """
         必须参数：*goods_ids,  start_time, duration/end_time， title
 
@@ -77,6 +78,7 @@ class Add(RenRenApi):
         =============
 
         快速增加秒杀活动
+        :param interface: 接口类，用于实现秒杀活动价格获取，实际生产中需实现该抽象类的call方法
         :param kwargs: 秒杀的一些属性设置
         :param goods_ids: 需要参加秒杀的商品
         :return:
@@ -113,7 +115,7 @@ class Add(RenRenApi):
                     options.append(option['id'])
                     rules.append({'option_id': option['id'],
                                   'is_join': 1,
-                                  'activity_price': float(option['price']) * 0.9,
+                                  'activity_price': interface.call(sku_id=option['id']),
                                   'activity_stock': int(option['stock'])
                                   })
                 goods_info.append({'goods_id': infos['id'],
@@ -125,7 +127,7 @@ class Add(RenRenApi):
                                    'has_option': 0,
                                    'option_id': 0,
                                    'activity_stock': int(infos['stock']),
-                                   'activity_price': 0.9 * float(infos['price']),
+                                   'activity_price': interface.call(goods_id=infos['id']),
                                    })
         data['goods_info'] = json.dumps(goods_info)
         data['goods_ids'] = goodsIds

@@ -4,8 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0320431c-2aa2-4605-926c-394be34cd999" name="Changes" comment="优化">
-      <change beforePath="$PROJECT_DIR$/setup.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup.py" afterDir="false" />
+    <list default="true" id="0320431c-2aa2-4605-926c-394be34cd999" name="Changes" comment="新版本更新">
+      <change afterPath="$PROJECT_DIR$/RenRen_Shop/common/price_interface.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RenRen_Shop/api/application/seckill/add.py" beforeDir="false" afterPath="$PROJECT_DIR$/RenRen_Shop/api/application/seckill/add.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RenRen_Shop/api/goods/edit_goods.py" beforeDir="false" afterPath="$PROJECT_DIR$/RenRen_Shop/api/goods/edit_goods.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/test.py" beforeDir="false" afterPath="$PROJECT_DIR$/test/test.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -40,6 +44,7 @@
     <setting file="file://$PROJECT_DIR$/RenRen_Shop/api/application/seckill/infos.py" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/test/test.py" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/RenRen_Shop/api/application/diypage/page_infos.py" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/RenRen_Shop/api/goods/template/goods_infos_template.json" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/RenRen_Shop/api/application/diypage/template/seckill_content_template.json" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
@@ -185,13 +190,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1649126057376</updated>
-    </task>
-    <task id="LOCAL-00044" summary="增加新的判断方式：!=">
-      <created>1649490114706</created>
-      <option name="number" value="00044" />
-      <option name="presentableId" value="LOCAL-00044" />
-      <option name="project" value="LOCAL" />
-      <updated>1649490114706</updated>
     </task>
     <task id="LOCAL-00045" summary="优化商品全属性筛选功能，增加'!='判断">
       <created>1649490168376</created>
@@ -529,7 +527,14 @@
       <option name="project" value="LOCAL" />
       <updated>1650012976351</updated>
     </task>
-    <option name="localTasksCounter" value="93" />
+    <task id="LOCAL-00093" summary="新版本更新">
+      <created>1650013013955</created>
+      <option name="number" value="00093" />
+      <option name="presentableId" value="LOCAL-00093" />
+      <option name="project" value="LOCAL" />
+      <updated>1650013013955</updated>
+    </task>
+    <option name="localTasksCounter" value="94" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -544,7 +549,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="新增" />
     <MESSAGE value="文档更新" />
     <MESSAGE value="增加商品一键复制功能，支持属性修改" />
     <MESSAGE value="版本更替" />
@@ -569,7 +573,8 @@
     <MESSAGE value="增加公用方法" />
     <MESSAGE value="测试文件" />
     <MESSAGE value="优化" />
-    <option name="LAST_COMMIT_MESSAGE" value="优化" />
+    <MESSAGE value="新版本更新" />
+    <option name="LAST_COMMIT_MESSAGE" value="新版本更新" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -583,11 +588,6 @@
           <url>file://$PROJECT_DIR$/RenRen_Shop/api/group/update_groups.py</url>
           <line>17</line>
           <option name="timeStamp" value="9" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/RenRen_Shop/api/application/seckill/add.py</url>
-          <line>133</line>
-          <option name="timeStamp" value="10" />
         </line-breakpoint>
       </breakpoints>
       <default-breakpoints>
